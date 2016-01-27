@@ -20,7 +20,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         // Override point for customization after application launch.
         let window = UIWindow(frame: UIScreen.mainScreen().bounds)
-        window.rootViewController = UIViewController()
+        let viewModel = MatchesViewModel()
+        window.rootViewController = MatchesViewController(viewModel: viewModel)
         window.makeKeyAndVisible()
         self.window = window
         return true
