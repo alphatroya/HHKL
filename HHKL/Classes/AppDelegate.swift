@@ -15,6 +15,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+
+        CocoaLumberjackManager().configureLogging()
+
         // Override point for customization after application launch.
         let window = UIWindow(frame: UIScreen.mainScreen().bounds)
         let viewModel = MatchesViewModel()
