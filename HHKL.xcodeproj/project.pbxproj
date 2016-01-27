@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		B8DCA00CE1A55EAEA43628F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B8DCA18DF9BB427F720D821E /* Assets.xcassets */; };
 		B8DCA7A6CDDCAF413E11BC47 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DCAA581FB56B47D14A77D4 /* AppDelegate.swift */; };
+		B8DCA8CEF799E851F2E03983 /* CocoaLumberjackManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DCA4CF43EDD280116FB83C /* CocoaLumberjackManager.swift */; };
+		B8DCA9F890013084C0DE6C2E /* RequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DCAEF42E6A623D0AEBBFBD /* RequestManager.swift */; };
+		D40C4F571C58EDD000C616AF /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D40C4F531C58EDD000C616AF /* RxCocoa.framework */; };
+		D40C4F581C58EDD000C616AF /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D40C4F541C58EDD000C616AF /* RxSwift.framework */; };
 		D40F57741C58DB1C00348DB9 /* HHKLTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40F57731C58DB1C00348DB9 /* HHKLTests.swift */; };
 		D40F577F1C58DB1C00348DB9 /* HHKLUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40F577E1C58DB1C00348DB9 /* HHKLUITests.swift */; };
 		D40F57901C58DFC200348DB9 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D40F578C1C58DFC200348DB9 /* Alamofire.framework */; };
@@ -37,8 +41,12 @@
 
 /* Begin PBXFileReference section */
 		B8DCA18DF9BB427F720D821E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B8DCA4CF43EDD280116FB83C /* CocoaLumberjackManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CocoaLumberjackManager.swift; sourceTree = "<group>"; };
 		B8DCAA581FB56B47D14A77D4 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B8DCAEF42E6A623D0AEBBFBD /* RequestManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestManager.swift; sourceTree = "<group>"; };
 		B8DCAF8B7F1665CD4EB75C77 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
+		D40C4F531C58EDD000C616AF /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
+		D40C4F541C58EDD000C616AF /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
 		D40F575B1C58DB1C00348DB9 /* HHKL.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HHKL.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D40F576F1C58DB1C00348DB9 /* HHKLTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HHKLTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D40F57731C58DB1C00348DB9 /* HHKLTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HHKLTests.swift; sourceTree = "<group>"; };
@@ -60,7 +68,9 @@
 			files = (
 				D40F57931C58DFC200348DB9 /* CocoaLumberjackSwift.framework in Frameworks */,
 				D40F57911C58DFC200348DB9 /* ATRLogFormatter.framework in Frameworks */,
+				D40C4F571C58EDD000C616AF /* RxCocoa.framework in Frameworks */,
 				D40F57961C58E09E00348DB9 /* CocoaLumberjack.framework in Frameworks */,
+				D40C4F581C58EDD000C616AF /* RxSwift.framework in Frameworks */,
 				D40F57901C58DFC200348DB9 /* Alamofire.framework in Frameworks */,
 				D40F57921C58DFC200348DB9 /* Chameleon.framework in Frameworks */,
 			);
@@ -92,10 +102,28 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		B8DCA8AEB5AE162C1D9C37E0 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				B8DCA4CF43EDD280116FB83C /* CocoaLumberjackManager.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		B8DCAB71795CC7EC97F11462 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				B8DCAEF42E6A623D0AEBBFBD /* RequestManager.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
 		B8DCAE4153B42B9D2FF10A1C /* Classes */ = {
 			isa = PBXGroup;
 			children = (
 				B8DCAA581FB56B47D14A77D4 /* AppDelegate.swift */,
+				B8DCAB71795CC7EC97F11462 /* Network */,
+				B8DCA8AEB5AE162C1D9C37E0 /* Common */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -103,6 +131,8 @@
 		D40F57521C58DB1C00348DB9 = {
 			isa = PBXGroup;
 			children = (
+				D40C4F531C58EDD000C616AF /* RxCocoa.framework */,
+				D40C4F541C58EDD000C616AF /* RxSwift.framework */,
 				D40F57951C58E09E00348DB9 /* CocoaLumberjack.framework */,
 				D40F578C1C58DFC200348DB9 /* Alamofire.framework */,
 				D40F578D1C58DFC200348DB9 /* ATRLogFormatter.framework */,
@@ -290,6 +320,8 @@
 				"$(SRCROOT)/Carthage/Build/iOS/Chameleon.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/CocoaLumberjackSwift.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/CocoaLumberjack.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxCocoa.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
 			);
 			name = Carthage;
 			outputPaths = (
@@ -320,6 +352,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				B8DCA7A6CDDCAF413E11BC47 /* AppDelegate.swift in Sources */,
+				B8DCA9F890013084C0DE6C2E /* RequestManager.swift in Sources */,
+				B8DCA8CEF799E851F2E03983 /* CocoaLumberjackManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
