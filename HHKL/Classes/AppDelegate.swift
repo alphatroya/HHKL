@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RxSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -14,9 +15,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
 
-    func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+    func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject:AnyObject]?) -> Bool {
 
         CocoaLumberjackManager().configureLogging()
+
+        //TODO test code, delete after tests
+        let requestManager = RequestManager()
+        requestManager.host = "http://hhkl.handh.ru:666/api/"
+        requestManager.makeRequestWithType(.GET, path: "league/1/matches/",  parameters: nil).subscribe {
+            switch $0 {
+            case .Next(let json):
+                print("\(json)")
+            case .Error:
+                print("error")
+            case .Completed:
+                print("completed")
+            }
+        }
+
 
         // Override point for customization after application launch.
         let window = UIWindow(frame: UIScreen.mainScreen().bounds)
