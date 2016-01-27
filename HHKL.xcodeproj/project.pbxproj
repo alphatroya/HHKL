@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D40F575F1C58DB1C00348DB9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40F575E1C58DB1C00348DB9 /* AppDelegate.swift */; };
-		D40F57661C58DB1C00348DB9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D40F57651C58DB1C00348DB9 /* Assets.xcassets */; };
-		D40F57691C58DB1C00348DB9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D40F57671C58DB1C00348DB9 /* LaunchScreen.storyboard */; };
+		B8DCA00CE1A55EAEA43628F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B8DCA18DF9BB427F720D821E /* Assets.xcassets */; };
+		B8DCA7A6CDDCAF413E11BC47 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DCAA581FB56B47D14A77D4 /* AppDelegate.swift */; };
+		B8DCA87A9265CAD2FD088FF6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8DCAF2A72F78B8D14CCACD1 /* LaunchScreen.storyboard */; };
 		D40F57741C58DB1C00348DB9 /* HHKLTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40F57731C58DB1C00348DB9 /* HHKLTests.swift */; };
 		D40F577F1C58DB1C00348DB9 /* HHKLUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40F577E1C58DB1C00348DB9 /* HHKLUITests.swift */; };
 		D40F57901C58DFC200348DB9 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D40F578C1C58DFC200348DB9 /* Alamofire.framework */; };
@@ -37,11 +37,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B8DCA01F0EC4672842A71B3F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = HHKL/Base.lproj/LaunchScreen.storyboard; sourceTree = SOURCE_ROOT; };
+		B8DCA18DF9BB427F720D821E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B8DCAA581FB56B47D14A77D4 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B8DCAF8B7F1665CD4EB75C77 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
 		D40F575B1C58DB1C00348DB9 /* HHKL.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HHKL.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		D40F575E1C58DB1C00348DB9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D40F57651C58DB1C00348DB9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		D40F57681C58DB1C00348DB9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		D40F576A1C58DB1C00348DB9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D40F576F1C58DB1C00348DB9 /* HHKLTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HHKLTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D40F57731C58DB1C00348DB9 /* HHKLTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HHKLTests.swift; sourceTree = "<group>"; };
 		D40F57751C58DB1C00348DB9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -85,6 +85,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B8DCA39033F3D7B1A1039E3F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B8DCAF2A72F78B8D14CCACD1 /* LaunchScreen.storyboard */,
+				B8DCAF8B7F1665CD4EB75C77 /* Info.plist */,
+				B8DCA18DF9BB427F720D821E /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		B8DCAE4153B42B9D2FF10A1C /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				B8DCAA581FB56B47D14A77D4 /* AppDelegate.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
 		D40F57521C58DB1C00348DB9 = {
 			isa = PBXGroup;
 			children = (
@@ -113,10 +131,8 @@
 		D40F575D1C58DB1C00348DB9 /* HHKL */ = {
 			isa = PBXGroup;
 			children = (
-				D40F575E1C58DB1C00348DB9 /* AppDelegate.swift */,
-				D40F57651C58DB1C00348DB9 /* Assets.xcassets */,
-				D40F57671C58DB1C00348DB9 /* LaunchScreen.storyboard */,
-				D40F576A1C58DB1C00348DB9 /* Info.plist */,
+				B8DCAE4153B42B9D2FF10A1C /* Classes */,
+				B8DCA39033F3D7B1A1039E3F /* Resources */,
 			);
 			path = HHKL;
 			sourceTree = "<group>";
@@ -245,8 +261,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D40F57691C58DB1C00348DB9 /* LaunchScreen.storyboard in Resources */,
-				D40F57661C58DB1C00348DB9 /* Assets.xcassets in Resources */,
+				B8DCA87A9265CAD2FD088FF6 /* LaunchScreen.storyboard in Resources */,
+				B8DCA00CE1A55EAEA43628F9 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -307,7 +323,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D40F575F1C58DB1C00348DB9 /* AppDelegate.swift in Sources */,
+				B8DCA7A6CDDCAF413E11BC47 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -343,10 +359,10 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		D40F57671C58DB1C00348DB9 /* LaunchScreen.storyboard */ = {
+		B8DCAF2A72F78B8D14CCACD1 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				D40F57681C58DB1C00348DB9 /* Base */,
+				B8DCA01F0EC4672842A71B3F /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -443,7 +459,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = HHKL/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/HHKL/Resources/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ru.handh.HHKL;
@@ -460,7 +476,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = HHKL/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/HHKL/Resources/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ru.handh.HHKL;
