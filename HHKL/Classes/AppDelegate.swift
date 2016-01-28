@@ -8,6 +8,7 @@
 
 import UIKit
 import RxSwift
+import SwiftyJSON
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -22,14 +23,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //TODO test code, delete after tests
         let requestManager = RequestManager()
         requestManager.host = "http://hhkl.handh.ru:666/api/"
-        requestManager.makeRequestWithType(.GET, path: "league/1/matches/",  parameters: nil).subscribe {
-            switch $0 {
-            case .Next(let json):
-                print("\(json)")
-            case .Error:
-                print("error")
-            case .Completed:
-                print("completed")
+        let requestDataObservable = requestManager.makeRequestWithType(.GET, path: "league/1/matches/", parameters: nil).map {
+            return JSON($0)["days"]
+        }
+        let dayParser = DayParser()
+        dayParser.parseModelArray(requestDataObservable).subscribe {
+            print($0)
+            if case Event.Next(let x) = $0 {
+                print(x.count)
             }
         }
 

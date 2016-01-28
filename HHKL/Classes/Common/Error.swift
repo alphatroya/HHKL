@@ -6,5 +6,5 @@
 import Foundation
 
 enum Error: ErrorType {
-    case ClassWrongConfigured, CriticalError
+    case ClassWrongConfigured, CriticalError, ParserError
 }
