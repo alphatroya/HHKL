@@ -5,14 +5,9 @@
 
 import Foundation
 
-protocol MatchesViewModelProtocol {
-
-    func screenWillAppear()
+protocol MatchesViewModelProtocol: ViewModelProtocol {
 }
 
 class MatchesViewModel: MatchesViewModelProtocol {
 
-    func screenWillAppear() {
-        print("WillAppear-bazinga!")
-    }
 }

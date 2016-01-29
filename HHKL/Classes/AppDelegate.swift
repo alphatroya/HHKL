@@ -15,10 +15,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject:AnyObject]?) -> Bool {
 
         CocoaLumberjackManager().configureLogging()
+
+        let viewModelFactory = ViewModelFactory(accessoryFactory: ViewModelAccessoryFactory())
+        let viewControllerFactory = ViewControllerFactory(accessoryFactory: ViewControllerAccessoryFactory(), viewModelFactory: viewModelFactory)
 
         //TODO test code, delete after tests
         let requestManager = RequestManager()

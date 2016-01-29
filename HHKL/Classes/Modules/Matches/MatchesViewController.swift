@@ -17,8 +17,8 @@ class MatchesViewController: ParentViewController {
         super.init(nibName: nil, bundle: nil)
     }
 
-    override func viewWillAppear(animated: Bool) {
-        super.viewWillAppear(animated)
-        viewModel.screenWillAppear()
+    let tableView = UITableView()
+    override func viewDidLoad() {
+        super.viewDidLoad()
     }
 }

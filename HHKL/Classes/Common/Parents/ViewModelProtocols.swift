@@ -4,3 +4,20 @@
 //
 
 import Foundation
+
+protocol ViewModelProtocol {
+    func viewDidLoad()
+    func viewWillAppear()
+    func viewDidAppear()
+}
+
+extension ViewModelProtocol {
+    func viewDidLoad() {
+    }
+
+    func viewWillAppear() {
+    }
+
+    func viewDidAppear() {
+    }
+}
