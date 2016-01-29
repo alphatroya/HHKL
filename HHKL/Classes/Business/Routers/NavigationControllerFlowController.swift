@@ -47,11 +47,30 @@ class NavigationControllerFlowController: UINavigationController, FlowController
     }
 
     func presentChildFlowController(flowController: FlowControllerProtocol) -> FlowControllerResultObservable {
-        return Observable.just(UIViewController())
+        return Observable.create {
+            observer in
+            flowController.parentFlowController = self
+            if let viewController = flowController as? UIViewController {
+                self.presentViewController(viewController, animated: true, completion: {
+                    observer.on(Event.Next(viewController))
+                    observer.on(Event.Completed)
+                })
+            } else {
+                observer.on(Event.Error(Error.CriticalError))
+            }
+            return NopDisposable.instance
+        }
     }
 
     func dismissPresentedChildFlowController(animated: Bool) -> FlowControllerResultObservable {
-        return Observable.just(UIViewController())
+        return Observable.create {
+            observer in
+            self.dismissViewControllerAnimated(animated, completion: {
+                observer.on(Event.Next(nil))
+                observer.on(Event.Completed)
+            })
+            return NopDisposable.instance
+        }
     }
 
 }
