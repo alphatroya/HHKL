@@ -18,6 +18,9 @@ class ViewModelFactory: ViewModelFactoryProtocol {
     }
 
     func matchesViewModel(flowController: FlowControllerProtocol) -> MatchesViewModelProtocol {
-        return MatchesViewModel(flowController: flowController)
+        let viewModel = MatchesViewModel(flowController: flowController)
+        viewModel.requestManager = accessoryFactory.requestManager
+        viewModel.dayParser = accessoryFactory.dayParser
+        return viewModel
     }
 }

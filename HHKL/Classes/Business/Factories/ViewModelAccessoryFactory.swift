@@ -6,9 +6,21 @@
 import Foundation
 
 protocol ViewModelAccessoryFactoryProtocol {
-
+    var requestManager: RequestManagerProtocol { get }
+    var dayParser: DayParser { get }
 }
 
 class ViewModelAccessoryFactory: ViewModelAccessoryFactoryProtocol {
+
+    var requestManager: RequestManagerProtocol {
+        let requestManager = RequestManager()
+        requestManager.host = "http://hhkl.handh.ru:666/api/"
+        return requestManager
+    }
+
+    var dayParser: DayParser {
+        return DayParser()
+    }
+
 
 }

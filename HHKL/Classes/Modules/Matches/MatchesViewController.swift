@@ -22,17 +22,47 @@ class MatchesViewController: ParentViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let button = UIButton()
-        view.addSubview(button)
-        button.snp_makeConstraints {
-            make in
-            make.size.equalTo(CGSizeMake(40, 40))
-            make.center.equalTo(0)
+        view.addSubview(tableView)
+        tableView.snp_makeConstraints {
+            $0.edges.equalTo(0)
         }
-        button.addTarget(self, action: "performTransition", forControlEvents: .TouchUpInside)
+        tableView.dataSource = self
+        tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: String(UITableViewCell))
+
     }
 
-    func performTransition() {
-        viewModel.performTransition()
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        viewModel.reloadMatches().subscribe() {
+            self.tableView.reloadData()
+            if case let .Error(error) = $0 {
+                //TODO error handling
+            }
+        }
     }
+}
+
+extension MatchesViewController: UITableViewDataSource {
+
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return viewModel.numberOfSections()
+    }
+
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return viewModel.numberOfCellsInSection(section)
+    }
+
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier(String(UITableViewCell), forIndexPath: indexPath)
+//        if let match = viewModel.matchForCellAtIndexPath(indexPath) {
+//            cell.
+//        }
+        return cell
+    }
+
+    func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return viewModel.titleForHeaderInSection(section)
+    }
+
+
 }
