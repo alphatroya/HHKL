@@ -6,7 +6,7 @@
 import Foundation
 
 protocol ViewModelFactoryProtocol {
-    func matchesViewModel() -> MatchesViewModelProtocol
+    func matchesViewModel(flowController: FlowControllerProtocol) -> MatchesViewModelProtocol
 }
 
 class ViewModelFactory: ViewModelFactoryProtocol {
@@ -17,7 +17,7 @@ class ViewModelFactory: ViewModelFactoryProtocol {
         self.accessoryFactory = accessoryFactory
     }
 
-    func matchesViewModel() -> MatchesViewModelProtocol {
-        return MatchesViewModel()
+    func matchesViewModel(flowController: FlowControllerProtocol) -> MatchesViewModelProtocol {
+        return MatchesViewModel(flowController: flowController)
     }
 }

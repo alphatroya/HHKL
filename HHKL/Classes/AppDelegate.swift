@@ -36,11 +36,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
 
+        let rootFlowController = NavigationControllerFlowController(viewControllerFactory: viewControllerFactory, rootViewControllerType: .MatchesViewController)
 
         // Override point for customization after application launch.
         let window = UIWindow(frame: UIScreen.mainScreen().bounds)
-        let viewModel = MatchesViewModel()
-        window.rootViewController = MatchesViewController(viewModel: viewModel)
+        window.rootViewController = rootFlowController
         window.makeKeyAndVisible()
         self.window = window
         return true

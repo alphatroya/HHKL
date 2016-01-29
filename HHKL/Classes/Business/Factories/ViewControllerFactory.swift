@@ -10,7 +10,7 @@ enum ViewControllerType {
 }
 
 protocol ViewControllerFactoryProtocol {
-    func instantiateViewControllerWith(type: ViewControllerType) -> ParentViewController
+    func instantiateViewControllerWith(type: ViewControllerType, flowController: FlowControllerProtocol) -> ParentViewController
 }
 
 class ViewControllerFactory: ViewControllerFactoryProtocol {
@@ -23,10 +23,10 @@ class ViewControllerFactory: ViewControllerFactoryProtocol {
         self.viewModelFactory = viewModelFactory
     }
 
-    func instantiateViewControllerWith(type: ViewControllerType) -> ParentViewController {
+    func instantiateViewControllerWith(type: ViewControllerType, flowController: FlowControllerProtocol) -> ParentViewController {
         switch type {
         case .MatchesViewController:
-            return matchesViewController(viewModelFactory.matchesViewModel())
+            return matchesViewController(viewModelFactory.matchesViewModel(flowController))
         }
     }
 

@@ -9,6 +9,9 @@ protocol ViewModelProtocol {
     func viewDidLoad()
     func viewWillAppear()
     func viewDidAppear()
+
+    var flowController: FlowControllerProtocol { get }
+    init(flowController: FlowControllerProtocol)
 }
 
 extension ViewModelProtocol {

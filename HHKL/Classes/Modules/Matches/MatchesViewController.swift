@@ -4,6 +4,7 @@
 //
 
 import UIKit
+import SnapKit
 
 class MatchesViewController: ParentViewController {
     let viewModel: MatchesViewModelProtocol
@@ -20,5 +21,18 @@ class MatchesViewController: ParentViewController {
     let tableView = UITableView()
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        let button = UIButton()
+        view.addSubview(button)
+        button.snp_makeConstraints {
+            make in
+            make.size.equalTo(CGSizeMake(40, 40))
+            make.center.equalTo(0)
+        }
+        button.addTarget(self, action: "performTransition", forControlEvents: .TouchUpInside)
+    }
+
+    func performTransition() {
+        viewModel.performTransition()
     }
 }
