@@ -27,7 +27,8 @@ class MatchesViewController: ParentViewController {
             $0.edges.equalTo(0)
         }
         tableView.dataSource = self
-        tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: String(UITableViewCell))
+        tableView.registerClass(MatchCell.self, forCellReuseIdentifier: String(MatchCell))
+        tableView.estimatedRowHeight = 80
 
     }
 
@@ -53,7 +54,7 @@ extension MatchesViewController: UITableViewDataSource {
     }
 
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier(String(UITableViewCell), forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCellWithIdentifier(String(MatchCell), forIndexPath: indexPath) as! MatchCell
 //        if let match = viewModel.matchForCellAtIndexPath(indexPath) {
 //            cell.
 //        }
