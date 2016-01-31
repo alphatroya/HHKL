@@ -7,38 +7,24 @@
 //
 
 import UIKit
-import RxSwift
-import SwiftyJSON
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject:AnyObject]?) -> Bool {
 
         CocoaLumberjackManager().configureLogging()
 
-        //TODO test code, delete after tests
-        let requestManager = RequestManager()
-        requestManager.host = "http://hhkl.handh.ru:666/api/"
-        let requestDataObservable = requestManager.makeRequestWithType(.GET, path: "league/1/matches/", parameters: nil).map {
-            return JSON($0)["days"]
-        }
-        let dayParser = DayParser()
-        dayParser.parseModelArray(requestDataObservable).subscribe {
-            print($0)
-            if case Event.Next(let x) = $0 {
-                print(x.count)
-            }
-        }
+        let viewModelFactory = ViewModelFactory(accessoryFactory: ViewModelAccessoryFactory())
+        let viewControllerFactory = ViewControllerFactory(accessoryFactory: ViewControllerAccessoryFactory(), viewModelFactory: viewModelFactory)
 
+        let rootFlowController = NavigationControllerFlowController(viewControllerFactory: viewControllerFactory, rootViewControllerType: .MatchesViewController)
 
         // Override point for customization after application launch.
         let window = UIWindow(frame: UIScreen.mainScreen().bounds)
-        let viewModel = MatchesViewModel()
-        window.rootViewController = MatchesViewController(viewModel: viewModel)
+        window.rootViewController = rootFlowController
         window.makeKeyAndVisible()
         self.window = window
         return true
