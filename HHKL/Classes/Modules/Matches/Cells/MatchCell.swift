@@ -84,9 +84,7 @@ class MatchCell: ParentTableViewCell {
 
     override func prepareForReuse() {
         super.prepareForReuse()
-        yellowGamerImageView?.backgroundColor = UIColor.randomFlatColor()
         yellowGamerImageView?.image = nil
-        redGamerImageView?.backgroundColor = UIColor.randomFlatColor()
         redGamerImageView?.image = nil
         yellowGamerLabel?.text = nil
         redGamerLabel?.text = nil

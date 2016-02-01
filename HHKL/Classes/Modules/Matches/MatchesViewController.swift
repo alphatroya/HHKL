@@ -23,10 +23,14 @@ class MatchesViewController: ParentViewController {
     }
 
     let tableView = UITableView()
+    let segmentedControl = UISegmentedControl(items: ["matches-view-controller-first-league".localized(), "matches-view-controller-second-league".localized()])
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        title = "matches-view-controller-title".localized()
+        navigationItem.titleView = segmentedControl
+        segmentedControl.selectedSegmentIndex = 0
+        segmentedControl.addTarget(self, action: "segmentedControlPressed", forControlEvents: .ValueChanged)
 
         view.addSubview(tableView)
         tableView.snp_makeConstraints {
@@ -52,7 +56,7 @@ class MatchesViewController: ParentViewController {
             return
         }
         dataLoading = true
-        viewModel.reloadMatches()
+        viewModel.reloadMatches(segmentedControl.selectedSegmentIndex + 1)
         .subscribe() {
             self.dataLoading = false
             self.tableView.reloadData()
@@ -61,6 +65,11 @@ class MatchesViewController: ParentViewController {
             }
         }
         .addDisposableTo(self.disposeBag)
+    }
+
+    func segmentedControlPressed() {
+        self.dataLoading = false
+        reloadData()
     }
 }
 
