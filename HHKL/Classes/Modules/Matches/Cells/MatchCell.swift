@@ -7,9 +7,13 @@ import UIKit
 import SnapKit
 import Chameleon
 
-
-//TODO all code there is for tests and will be changed
 class MatchCell: ParentTableViewCell {
+
+    var yellowGamerImageView: UIImageView?
+    var redGamerImageView: UIImageView?
+    var yellowGamerLabel: UILabel?
+    var redGamerLabel: UILabel?
+    var scoreLabel: UILabel?
 
     required init(coder aDecoder: NSCoder) {
         fatalError("NSCoding not supported")
@@ -29,18 +33,24 @@ class MatchCell: ParentTableViewCell {
             $0.edges.equalTo(0)
         }
 
-        mainStackView.addArrangedSubview(createRedPlayerSection(0))
+        var stack = createPlayerSection()
+        yellowGamerLabel = stack.label
+        yellowGamerImageView = stack.imageView
+        mainStackView.addArrangedSubview(stack.stackView)
 
-        let label3 = UILabel()
-        label3.textAlignment = .Center
-        label3.text = "1 : 100"
-        label3.font = UIFont.systemFontOfSize(20)
-        mainStackView.addArrangedSubview(label3)
+        let scoreLabel = UILabel()
+        scoreLabel.textAlignment = .Center
+        scoreLabel.font = UIFont.systemFontOfSize(20)
+        mainStackView.addArrangedSubview(scoreLabel)
+        self.scoreLabel = scoreLabel
 
-        mainStackView.addArrangedSubview(createRedPlayerSection(3))
+        stack = createPlayerSection()
+        redGamerLabel = stack.label
+        redGamerImageView = stack.imageView
+        mainStackView.addArrangedSubview(stack.stackView)
     }
 
-    private func createRedPlayerSection(int: Int) -> UIStackView {
+    private func createPlayerSection() -> (stackView:UIStackView, label:UILabel, imageView:UIImageView) {
         let stackView = UIStackView()
         stackView.distribution = .FillProportionally
         stackView.axis = .Vertical
@@ -60,10 +70,21 @@ class MatchCell: ParentTableViewCell {
 
         let gamerNameLabel = UILabel()
         gamerNameLabel.textAlignment = .Center
-        gamerNameLabel.text = int > 0 ? "gthrtr2343243423423jhrt" : "fdgfdgg"
+        gamerNameLabel.adjustsFontSizeToFitWidth = true
         stackView.addArrangedSubview(gamerNameLabel)
 
-        return stackView
+        return (stackView, gamerNameLabel, gamerAvatar)
+    }
+
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        yellowGamerImageView?.backgroundColor = UIColor.randomFlatColor()
+        yellowGamerImageView?.image = nil
+        redGamerImageView?.backgroundColor = UIColor.randomFlatColor()
+        redGamerImageView?.image = nil
+        yellowGamerLabel?.text = nil
+        redGamerLabel?.text = nil
+        scoreLabel?.text = nil
     }
 
 }

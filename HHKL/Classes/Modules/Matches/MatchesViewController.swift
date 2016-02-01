@@ -55,8 +55,8 @@ class MatchesViewController: ParentViewController {
         .subscribe() {
             self.dataLoading = false
             self.tableView.reloadData()
-            if case .Error(_) = $0 {
-                //TODO error handling
+            if case Event.Next(let x) = $0 {
+                self.tableView.scrollToRowAtIndexPath(x.findFirstActiveDay(), atScrollPosition: .Top, animated: true)
             }
         }
         .addDisposableTo(self.disposeBag)
@@ -75,14 +75,23 @@ extension MatchesViewController: UITableViewDataSource {
 
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier(String(MatchCell), forIndexPath: indexPath)
-        if let matchCell = cell as? MatchCell {
-
+        if let
+        matchCell = cell as? MatchCell,
+        match = viewModel.matchForCellAtIndexPath(indexPath) {
+            matchCell.yellowGamerLabel?.text = match.yellow.name
+            matchCell.redGamerLabel?.text = match.red.name
+            if let scoreArray = match.score where !scoreArray.isEmpty {
+                let result = scoreArray.getResultOfMatch()
+                matchCell.scoreLabel?.text = "\(result.yellow) : \(result.red)"
+            } else {
+                matchCell.scoreLabel?.text = "match-view-controller-vernus".localized()
+            }
         }
         return cell
     }
 
     func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return viewModel.titleForHeaderInSection(section)
+        return "matches-view-controller-day-prefix".localized() + " " + viewModel.titleForHeaderInSection(section)
     }
 
 

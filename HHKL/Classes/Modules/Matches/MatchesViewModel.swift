@@ -16,7 +16,7 @@ protocol MatchesViewModelProtocol: ViewModelProtocol {
 
     func titleForHeaderInSection(section: Int) -> String
 
-    func reloadMatches() -> Observable<Bool>
+    func reloadMatches() -> Observable<[Day]>
 }
 
 class MatchesViewModel: MatchesViewModelProtocol {
@@ -29,7 +29,7 @@ class MatchesViewModel: MatchesViewModelProtocol {
         self.flowController = flowController
     }
 
-    func reloadMatches() -> Observable<Bool> {
+    func reloadMatches() -> Observable<[Day]> {
         guard let
         requestManager = self.requestManager,
         dayParser = self.dayParser else {
@@ -42,8 +42,7 @@ class MatchesViewModel: MatchesViewModelProtocol {
         }
         return dayParser.parseModelArray(requestDataObservable).map {
             self.dataSource = $0
-        }.flatMap {
-            return Observable.just(true)
+            return $0
         }
     }
 
