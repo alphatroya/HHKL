@@ -40,6 +40,8 @@
 		D40F57961C58E09E00348DB9 /* CocoaLumberjack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D40F57951C58E09E00348DB9 /* CocoaLumberjack.framework */; };
 		D41EC1F21C5B5472008FE405 /* APMAlertController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D41EC1F01C5B5472008FE405 /* APMAlertController.framework */; };
 		D41EC1F31C5B5472008FE405 /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D41EC1F11C5B5472008FE405 /* SnapKit.framework */; };
+		D41EC1F71C5F3E41008FE405 /* DZNEmptyDataSet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D41EC1F51C5F3E41008FE405 /* DZNEmptyDataSet.framework */; };
+		D41EC1F81C5F3E41008FE405 /* NetworkActivityIndicatorManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D41EC1F61C5F3E41008FE405 /* NetworkActivityIndicatorManager.framework */; };
 		D455DA301C59FB1500C3B48B /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D455DA2F1C59FB1500C3B48B /* SwiftyJSON.framework */; };
 /* End PBXBuildFile section */
 
@@ -100,6 +102,8 @@
 		D40F57951C58E09E00348DB9 /* CocoaLumberjack.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CocoaLumberjack.framework; path = Carthage/Build/iOS/CocoaLumberjack.framework; sourceTree = "<group>"; };
 		D41EC1F01C5B5472008FE405 /* APMAlertController.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = APMAlertController.framework; path = Carthage/Build/iOS/APMAlertController.framework; sourceTree = "<group>"; };
 		D41EC1F11C5B5472008FE405 /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnapKit.framework; path = Carthage/Build/iOS/SnapKit.framework; sourceTree = "<group>"; };
+		D41EC1F51C5F3E41008FE405 /* DZNEmptyDataSet.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DZNEmptyDataSet.framework; path = Carthage/Build/iOS/DZNEmptyDataSet.framework; sourceTree = "<group>"; };
+		D41EC1F61C5F3E41008FE405 /* NetworkActivityIndicatorManager.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NetworkActivityIndicatorManager.framework; path = Carthage/Build/iOS/NetworkActivityIndicatorManager.framework; sourceTree = "<group>"; };
 		D455DA2F1C59FB1500C3B48B /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -112,12 +116,14 @@
 				D41EC1F21C5B5472008FE405 /* APMAlertController.framework in Frameworks */,
 				D40F57931C58DFC200348DB9 /* CocoaLumberjackSwift.framework in Frameworks */,
 				D40F57911C58DFC200348DB9 /* ATRLogFormatter.framework in Frameworks */,
+				D41EC1F81C5F3E41008FE405 /* NetworkActivityIndicatorManager.framework in Frameworks */,
 				D40C4F571C58EDD000C616AF /* RxCocoa.framework in Frameworks */,
 				D40F57961C58E09E00348DB9 /* CocoaLumberjack.framework in Frameworks */,
 				D40C4F581C58EDD000C616AF /* RxSwift.framework in Frameworks */,
 				D40F57901C58DFC200348DB9 /* Alamofire.framework in Frameworks */,
 				D40F57921C58DFC200348DB9 /* Chameleon.framework in Frameworks */,
 				D41EC1F31C5B5472008FE405 /* SnapKit.framework in Frameworks */,
+				D41EC1F71C5F3E41008FE405 /* DZNEmptyDataSet.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,16 +280,7 @@
 		D40F57521C58DB1C00348DB9 = {
 			isa = PBXGroup;
 			children = (
-				D41EC1F01C5B5472008FE405 /* APMAlertController.framework */,
-				D41EC1F11C5B5472008FE405 /* SnapKit.framework */,
-				D455DA2F1C59FB1500C3B48B /* SwiftyJSON.framework */,
-				D40C4F531C58EDD000C616AF /* RxCocoa.framework */,
-				D40C4F541C58EDD000C616AF /* RxSwift.framework */,
-				D40F57951C58E09E00348DB9 /* CocoaLumberjack.framework */,
-				D40F578C1C58DFC200348DB9 /* Alamofire.framework */,
-				D40F578D1C58DFC200348DB9 /* ATRLogFormatter.framework */,
-				D40F578E1C58DFC200348DB9 /* Chameleon.framework */,
-				D40F578F1C58DFC200348DB9 /* CocoaLumberjackSwift.framework */,
+				D41EC1F41C5F3DC6008FE405 /* Frameworks */,
 				D40F575D1C58DB1C00348DB9 /* HHKL */,
 				D40F57721C58DB1C00348DB9 /* HHKLTests */,
 				D40F577D1C58DB1C00348DB9 /* HHKLUITests */,
@@ -326,6 +323,25 @@
 				D40F57801C58DB1C00348DB9 /* Info.plist */,
 			);
 			path = HHKLUITests;
+			sourceTree = "<group>";
+		};
+		D41EC1F41C5F3DC6008FE405 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D41EC1F51C5F3E41008FE405 /* DZNEmptyDataSet.framework */,
+				D41EC1F61C5F3E41008FE405 /* NetworkActivityIndicatorManager.framework */,
+				D41EC1F01C5B5472008FE405 /* APMAlertController.framework */,
+				D41EC1F11C5B5472008FE405 /* SnapKit.framework */,
+				D455DA2F1C59FB1500C3B48B /* SwiftyJSON.framework */,
+				D40C4F531C58EDD000C616AF /* RxCocoa.framework */,
+				D40C4F541C58EDD000C616AF /* RxSwift.framework */,
+				D40F57951C58E09E00348DB9 /* CocoaLumberjack.framework */,
+				D40F578C1C58DFC200348DB9 /* Alamofire.framework */,
+				D40F578D1C58DFC200348DB9 /* ATRLogFormatter.framework */,
+				D40F578E1C58DFC200348DB9 /* Chameleon.framework */,
+				D40F578F1C58DFC200348DB9 /* CocoaLumberjackSwift.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -472,6 +488,8 @@
 				"$(SRCROOT)/Carthage/Build/iOS/SwiftyJSON.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/APMAlertController.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/SnapKit.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/DZNEmptyDataSet.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/NetworkActivityIndicatorManager.framework",
 			);
 			name = Carthage;
 			outputPaths = (
