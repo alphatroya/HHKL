@@ -7,5 +7,6 @@
 */
 
 
+"matches-view-controller-title" = "Список матчей";
 "matches-view-controller-empty-table-title" = "Список матчей пуст";
 "matches-view-controller-empty-table-description" = "Тапните по таблице для повторного запроса";

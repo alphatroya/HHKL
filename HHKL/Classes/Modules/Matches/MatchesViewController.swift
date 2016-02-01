@@ -26,6 +26,8 @@ class MatchesViewController: ParentViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        title = "matches-view-controller-title".localized()
+
         view.addSubview(tableView)
         tableView.snp_makeConstraints {
             $0.edges.equalTo(0)
@@ -72,10 +74,10 @@ extension MatchesViewController: UITableViewDataSource {
     }
 
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier(String(MatchCell), forIndexPath: indexPath) as! MatchCell
-//        if let match = viewModel.matchForCellAtIndexPath(indexPath) {
-//            cell.
-//        }
+        let cell = tableView.dequeueReusableCellWithIdentifier(String(MatchCell), forIndexPath: indexPath)
+        if let matchCell = cell as? MatchCell {
+
+        }
         return cell
     }
 
