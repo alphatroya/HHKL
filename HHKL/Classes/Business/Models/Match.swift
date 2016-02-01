@@ -13,6 +13,21 @@ struct Match {
     var score: [MatchScore]?
 }
 
+extension CollectionType where Generator.Element == MatchScore {
+    func getResultOfMatch() -> (yellow: Int, red: Int) {
+        var yellow = 0, red = 0
+        for matchResult in self {
+            if matchResult.firstNumber > matchResult.secondNumber {
+                yellow += 1
+            } else {
+                red += 1
+            }
+        }
+
+        return (yellow: yellow, red: red)
+    }
+}
+
 struct MatchScore {
     let firstNumber: Int
     let secondNumber: Int

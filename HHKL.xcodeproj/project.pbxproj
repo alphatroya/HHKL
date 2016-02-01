@@ -42,7 +42,9 @@
 		D41EC1F31C5B5472008FE405 /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D41EC1F11C5B5472008FE405 /* SnapKit.framework */; };
 		D41EC1F71C5F3E41008FE405 /* DZNEmptyDataSet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D41EC1F51C5F3E41008FE405 /* DZNEmptyDataSet.framework */; };
 		D41EC1F81C5F3E41008FE405 /* NetworkActivityIndicatorManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D41EC1F61C5F3E41008FE405 /* NetworkActivityIndicatorManager.framework */; };
+		D41EC1FB1C5F558F008FE405 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D41EC1FD1C5F558F008FE405 /* Localizable.strings */; };
 		D455DA301C59FB1500C3B48B /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D455DA2F1C59FB1500C3B48B /* SwiftyJSON.framework */; };
+		D4CC1D5D1C5F58E800C1DB16 /* Localize_Swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4CC1D5C1C5F58E800C1DB16 /* Localize_Swift.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -104,7 +106,9 @@
 		D41EC1F11C5B5472008FE405 /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnapKit.framework; path = Carthage/Build/iOS/SnapKit.framework; sourceTree = "<group>"; };
 		D41EC1F51C5F3E41008FE405 /* DZNEmptyDataSet.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DZNEmptyDataSet.framework; path = Carthage/Build/iOS/DZNEmptyDataSet.framework; sourceTree = "<group>"; };
 		D41EC1F61C5F3E41008FE405 /* NetworkActivityIndicatorManager.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NetworkActivityIndicatorManager.framework; path = Carthage/Build/iOS/NetworkActivityIndicatorManager.framework; sourceTree = "<group>"; };
+		D41EC1FF1C5F55E6008FE405 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		D455DA2F1C59FB1500C3B48B /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
+		D4CC1D5C1C5F58E800C1DB16 /* Localize_Swift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Localize_Swift.framework; path = Carthage/Build/iOS/Localize_Swift.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +126,7 @@
 				D40C4F581C58EDD000C616AF /* RxSwift.framework in Frameworks */,
 				D40F57901C58DFC200348DB9 /* Alamofire.framework in Frameworks */,
 				D40F57921C58DFC200348DB9 /* Chameleon.framework in Frameworks */,
+				D4CC1D5D1C5F58E800C1DB16 /* Localize_Swift.framework in Frameworks */,
 				D41EC1F31C5B5472008FE405 /* SnapKit.framework in Frameworks */,
 				D41EC1F71C5F3E41008FE405 /* DZNEmptyDataSet.framework in Frameworks */,
 			);
@@ -195,6 +200,7 @@
 				B8DCAF8B7F1665CD4EB75C77 /* Info.plist */,
 				B8DCA18DF9BB427F720D821E /* Assets.xcassets */,
 				84446B2B1C58F7CE00E6B171 /* LaunchScreen.storyboard */,
+				D41EC1FD1C5F558F008FE405 /* Localizable.strings */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -328,6 +334,7 @@
 		D41EC1F41C5F3DC6008FE405 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D4CC1D5C1C5F58E800C1DB16 /* Localize_Swift.framework */,
 				D41EC1F51C5F3E41008FE405 /* DZNEmptyDataSet.framework */,
 				D41EC1F61C5F3E41008FE405 /* NetworkActivityIndicatorManager.framework */,
 				D41EC1F01C5B5472008FE405 /* APMAlertController.framework */,
@@ -430,8 +437,8 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				en,
 				Base,
+				ru,
 			);
 			mainGroup = D40F57521C58DB1C00348DB9;
 			productRefGroup = D40F575C1C58DB1C00348DB9 /* Products */;
@@ -451,6 +458,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				84446B2C1C58F7CE00E6B171 /* LaunchScreen.storyboard in Resources */,
+				D41EC1FB1C5F558F008FE405 /* Localizable.strings in Resources */,
 				B8DCA00CE1A55EAEA43628F9 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -490,6 +498,7 @@
 				"$(SRCROOT)/Carthage/Build/iOS/SnapKit.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/DZNEmptyDataSet.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/NetworkActivityIndicatorManager.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Localize_Swift.framework",
 			);
 			name = Carthage;
 			outputPaths = (
@@ -573,6 +582,17 @@
 		};
 /* End PBXTargetDependency section */
 
+/* Begin PBXVariantGroup section */
+		D41EC1FD1C5F558F008FE405 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D41EC1FF1C5F55E6008FE405 /* ru */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
 		D40F57811C58DB1C00348DB9 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -610,7 +630,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -648,7 +668,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;

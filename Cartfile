@@ -7,3 +7,4 @@ github "SnapKit/SnapKit" ~> 0.19.1
 github "almas-dev/APMAlertController" ~> 0.2.2
 github "alphatroya/NetworkActivityIndicatorManager" ~> 1.0
 github "dzenbot/DZNEmptyDataSet" ~> 1.7.3
+github "marmelroy/Localize-Swift" ~> 1.1

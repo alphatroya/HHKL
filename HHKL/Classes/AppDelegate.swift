@@ -27,6 +27,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window.rootViewController = rootFlowController
         window.makeKeyAndVisible()
         self.window = window
+
+        let appearance = UINavigationBar.appearance()
+
+        appearance.setBackgroundImage(UIImage(), forBarMetrics: .Default)
+        appearance.shadowImage = UIImage()
+        appearance.barTintColor = UIColor.hhkl_mainColor()
+        appearance.tintColor = UIColor.hhkl_mainColor()
+        appearance.translucent = false
+
+
         return true
     }
 

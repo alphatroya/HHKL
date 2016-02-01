@@ -16,7 +16,7 @@ protocol MatchesViewModelProtocol: ViewModelProtocol {
 
     func titleForHeaderInSection(section: Int) -> String
 
-    func reloadMatches() -> Observable<Bool>
+    func reloadMatches(league: Int) -> Observable<[Day]>
 }
 
 class MatchesViewModel: MatchesViewModelProtocol {
@@ -29,21 +29,19 @@ class MatchesViewModel: MatchesViewModelProtocol {
         self.flowController = flowController
     }
 
-    func reloadMatches() -> Observable<Bool> {
+    func reloadMatches(league: Int) -> Observable<[Day]> {
         guard let
         requestManager = self.requestManager,
         dayParser = self.dayParser else {
             return Observable.error(Error.ClassWrongConfigured)
         }
 
-        // TODO create router
-        let requestDataObservable = requestManager.makeRequestWithType(.GET, path: "league/1/matches/", parameters: nil).map {
+        let requestDataObservable = requestManager.makeRequestWithType(.GET, path: .Matches(league), parameters: nil).map {
             return JSON($0)["days"]
         }
         return dayParser.parseModelArray(requestDataObservable).map {
             self.dataSource = $0
-        }.flatMap {
-            return Observable.just(true)
+            return $0
         }
     }
 

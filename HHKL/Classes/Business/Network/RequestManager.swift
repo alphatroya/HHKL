@@ -9,7 +9,18 @@ import Alamofire
 import NetworkActivityIndicatorManager
 
 protocol RequestManagerProtocol {
-    func makeRequestWithType(type: RequestManagerRequestType, path: String, parameters: Dictionary<String, AnyObject>?) -> Observable<Dictionary<String, AnyObject>>
+    func makeRequestWithType(type: RequestManagerRequestType, path: RequestManagerRequestRouter, parameters: Dictionary<String, AnyObject>?) -> Observable<Dictionary<String, AnyObject>>
+}
+
+enum RequestManagerRequestRouter {
+    case Matches(Int)
+
+    func path() -> String {
+        switch self {
+        case .Matches(let league):
+            return "league/\(league)/matches/"
+        }
+    }
 }
 
 enum RequestManagerRequestType {
@@ -20,7 +31,7 @@ class RequestManager: RequestManagerProtocol {
     var host: String?
     var networkActivityIndicatorManager: NetworkActivityIndicatorManager?
 
-    func makeRequestWithType(type: RequestManagerRequestType, path: String, parameters: Dictionary<String, AnyObject>?) -> Observable<Dictionary<String, AnyObject>> {
+    func makeRequestWithType(type: RequestManagerRequestType, path: RequestManagerRequestRouter, parameters: Dictionary<String, AnyObject>?) -> Observable<Dictionary<String, AnyObject>> {
         return Observable.create {
             observer in
 
@@ -41,7 +52,7 @@ class RequestManager: RequestManagerProtocol {
             }
 
             self.networkActivityIndicatorManager?.addActivity()
-            let request = Alamofire.request(methodUnwrapped, host + path, parameters: parameters).responseJSON {
+            let request = Alamofire.request(methodUnwrapped, host + path.path(), parameters: parameters).responseJSON {
                 response in
                 self.networkActivityIndicatorManager?.removeActivity()
                 if let json = response.result.value as? [String:AnyObject] {

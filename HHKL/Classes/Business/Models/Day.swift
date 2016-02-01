@@ -10,3 +10,14 @@ struct Day {
     let active: Bool
     let matches: [Match]?
 }
+
+extension CollectionType where Generator.Element == Day {
+    func findFirstActiveDay() -> NSIndexPath {
+        for (index, day) in self.enumerate() {
+            if !day.active {
+                return NSIndexPath(forRow: 0, inSection: index)
+            }
+        }
+        return NSIndexPath(forRow: 0, inSection: 0)
+    }
+}
