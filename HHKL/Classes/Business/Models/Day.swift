@@ -14,7 +14,7 @@ struct Day {
 extension CollectionType where Generator.Element == Day {
     func findFirstActiveDay() -> NSIndexPath {
         for (index, day) in self.enumerate() {
-            if day.active {
+            if !day.active {
                 return NSIndexPath(forRow: 0, inSection: index)
             }
         }
