@@ -29,6 +29,7 @@ class MatchesViewController: ParentViewController {
         super.viewDidLoad()
 
         navigationItem.titleView = segmentedControl
+        segmentedControl.tintColor = UIColor.hhkl_secondaryColor()
         segmentedControl.selectedSegmentIndex = 0
         segmentedControl.addTarget(self, action: "segmentedControlPressed", forControlEvents: .ValueChanged)
 

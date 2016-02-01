@@ -24,7 +24,7 @@ class MatchCell: ParentTableViewCell {
 
         self.selectedBackgroundView = {
             let view = UIView()
-            view.backgroundColor = UIColor.flatBlueColor()
+            view.backgroundColor = UIColor.hhkl_secondaryColor()
             return view
         }()
 
@@ -42,6 +42,7 @@ class MatchCell: ParentTableViewCell {
         var stack = createPlayerSection()
         yellowGamerLabel = stack.label
         yellowGamerImageView = stack.imageView
+        yellowGamerImageView?.backgroundColor = UIColor.hhkl_yellowFlatColor()
         mainStackView.addArrangedSubview(stack.stackView)
 
         let scoreLabel = UILabel()
@@ -53,6 +54,7 @@ class MatchCell: ParentTableViewCell {
         stack = createPlayerSection()
         redGamerLabel = stack.label
         redGamerImageView = stack.imageView
+        redGamerImageView?.backgroundColor = UIColor.hhkl_redFlatColor()
         mainStackView.addArrangedSubview(stack.stackView)
     }
 
@@ -64,7 +66,6 @@ class MatchCell: ParentTableViewCell {
         let view = UIView()
 
         let gamerAvatar = RoundImageView()
-        gamerAvatar.backgroundColor = UIColor.randomFlatColor()
         view.addSubview(gamerAvatar)
         gamerAvatar.snp_makeConstraints {
             make in
