@@ -92,6 +92,13 @@ class MatchCell: ParentTableViewCell {
         scoreLabel?.text = nil
     }
 
+    override func setSelected(selected: Bool, animated: Bool) {
+        super.setSelected(selected, animated: animated)
+
+        self.yellowGamerImageView?.backgroundColor = UIColor.hhkl_yellowFlatColor()
+        self.redGamerImageView?.backgroundColor = UIColor.hhkl_redFlatColor()
+    }
+
 }
 
 class RoundImageView: UIImageView {

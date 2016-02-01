@@ -13,7 +13,7 @@ extension UIColor {
     }
 
     static func hhkl_secondaryColor() -> UIColor {
-        var colorArray = NSArray(ofColorsWithColorScheme: ColorScheme.Triadic, with: UIColor.hhkl_mainColor(), flatScheme: true)
+        let colorArray = NSArray(ofColorsWithColorScheme: ColorScheme.Triadic, with: UIColor.hhkl_mainColor(), flatScheme: true)
         return colorArray.firstObject! as! UIColor
     }
 
