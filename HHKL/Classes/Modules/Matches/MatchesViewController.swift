@@ -33,6 +33,7 @@ class MatchesViewController: ParentViewController {
             $0.edges.equalTo(0)
         }
         tableView.dataSource = self
+        tableView.delegate = self
         tableView.registerClass(MatchCell.self, forCellReuseIdentifier: String(MatchCell))
         tableView.estimatedRowHeight = 80
         tableView.tableFooterView = UIView()
@@ -63,7 +64,7 @@ class MatchesViewController: ParentViewController {
     }
 }
 
-extension MatchesViewController: UITableViewDataSource {
+extension MatchesViewController: UITableViewDataSource, UITableViewDelegate {
 
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return viewModel.numberOfSections()
@@ -94,6 +95,9 @@ extension MatchesViewController: UITableViewDataSource {
         return "matches-view-controller-day-prefix".localized() + " " + viewModel.titleForHeaderInSection(section)
     }
 
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+    }
 
 }
 

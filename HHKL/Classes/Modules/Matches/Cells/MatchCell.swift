@@ -22,6 +22,12 @@ class MatchCell: ParentTableViewCell {
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
 
+        self.selectedBackgroundView = {
+            let view = UIView()
+            view.backgroundColor = UIColor.flatBlueColor()
+            return view
+        }()
+
         let mainStackView = UIStackView()
         mainStackView.axis = .Horizontal
         mainStackView.alignment = .Center
@@ -40,7 +46,7 @@ class MatchCell: ParentTableViewCell {
 
         let scoreLabel = UILabel()
         scoreLabel.textAlignment = .Center
-        scoreLabel.font = UIFont.systemFontOfSize(20)
+        scoreLabel.font = UIFont.systemFontOfSize(25)
         mainStackView.addArrangedSubview(scoreLabel)
         self.scoreLabel = scoreLabel
 
