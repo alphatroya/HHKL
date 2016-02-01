@@ -5,9 +5,13 @@
 
 import UIKit
 import SnapKit
+import RxSwift
+import DZNEmptyDataSet
+import Localize_Swift
 
 class MatchesViewController: ParentViewController {
     let viewModel: MatchesViewModelProtocol
+    let disposeBag = DisposeBag()
 
     required init(coder aDecoder: NSCoder) {
         fatalError("NSCoding not supported")
@@ -29,17 +33,31 @@ class MatchesViewController: ParentViewController {
         tableView.dataSource = self
         tableView.registerClass(MatchCell.self, forCellReuseIdentifier: String(MatchCell))
         tableView.estimatedRowHeight = 80
-
+        tableView.tableFooterView = UIView()
+        tableView.emptyDataSetSource = self
+        tableView.emptyDataSetDelegate = self
     }
 
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
-        viewModel.reloadMatches().subscribe() {
+        reloadData()
+    }
+
+    private var dataLoading = false
+    private func reloadData() {
+        guard !dataLoading else {
+            return
+        }
+        dataLoading = true
+        viewModel.reloadMatches()
+        .subscribe() {
+            self.dataLoading = false
             self.tableView.reloadData()
-            if case let .Error(error) = $0 {
+            if case .Error(_) = $0 {
                 //TODO error handling
             }
         }
+        .addDisposableTo(self.disposeBag)
     }
 }
 
@@ -66,4 +84,18 @@ extension MatchesViewController: UITableViewDataSource {
     }
 
 
+}
+
+extension MatchesViewController: DZNEmptyDataSetDelegate, DZNEmptyDataSetSource {
+    func titleForEmptyDataSet(scrollView: UIScrollView) -> NSAttributedString {
+        return NSAttributedString(string: "matches-view-controller-empty-table-title".localized())
+    }
+
+    func descriptionForEmptyDataSet(scrollView: UIScrollView) -> NSAttributedString {
+        return NSAttributedString(string: "matches-view-controller-empty-table-description".localized())
+    }
+
+    func emptyDataSetDidTapView(scrollView: UIScrollView) {
+        reloadData()
+    }
 }
