@@ -6,8 +6,7 @@
 import Foundation
 import RxSwift
 import Alamofire
-
-//TODO add network activity indicator
+import NetworkActivityIndicatorManager
 
 protocol RequestManagerProtocol {
     func makeRequestWithType(type: RequestManagerRequestType, path: String, parameters: Dictionary<String, AnyObject>?) -> Observable<Dictionary<String, AnyObject>>
@@ -19,6 +18,7 @@ enum RequestManagerRequestType {
 
 class RequestManager: RequestManagerProtocol {
     var host: String?
+    var networkActivityIndicatorManager: NetworkActivityIndicatorManager?
 
     func makeRequestWithType(type: RequestManagerRequestType, path: String, parameters: Dictionary<String, AnyObject>?) -> Observable<Dictionary<String, AnyObject>> {
         return Observable.create {
@@ -40,8 +40,10 @@ class RequestManager: RequestManagerProtocol {
                 return NopDisposable.instance
             }
 
+            self.networkActivityIndicatorManager?.addActivity()
             let request = Alamofire.request(methodUnwrapped, host + path, parameters: parameters).responseJSON {
                 response in
+                self.networkActivityIndicatorManager?.removeActivity()
                 if let json = response.result.value as? [String:AnyObject] {
                     observer.on(Event.Next(json))
                     observer.on(Event.Completed)
