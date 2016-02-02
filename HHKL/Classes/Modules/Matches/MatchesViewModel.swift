@@ -6,6 +6,7 @@
 import Foundation
 import RxSwift
 import SwiftyJSON
+import CocoaLumberjackSwift
 
 protocol MatchesViewModelProtocol: ViewModelProtocol {
     func numberOfCellsInSection(section: Int) -> Int
@@ -15,6 +16,8 @@ protocol MatchesViewModelProtocol: ViewModelProtocol {
     func matchForCellAtIndexPath(indexPath: NSIndexPath) -> Match?
 
     func titleForHeaderInSection(section: Int) -> String
+
+    func openInformationAboutMatchAtIndexPath(indexPath: NSIndexPath)
 
     func reloadMatches(league: Int) -> Observable<[Day]>
 }
@@ -82,5 +85,20 @@ class MatchesViewModel: MatchesViewModelProtocol {
         return matches.count
     }
 
+    func openInformationAboutMatchAtIndexPath(indexPath: NSIndexPath) {
+        guard let dataSource = self.dataSource where indexPath.section < dataSource.count else {
+            return
+        }
+        let day = dataSource[indexPath.section]
+        guard let matches = day.matches else {
+            return
+        }
+        let match = matches[indexPath.row]
+        self.flowController.performTransitionToController(.MatchViewController(match: match)).subscribe {
+            if case .Error(_) = $0 {
+                DDLogWarn("error while performing transition")
+            }
+        }
+    }
 
 }

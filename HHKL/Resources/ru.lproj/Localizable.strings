@@ -7,9 +7,12 @@
 */
 
 
+"matches-view-controller-title" = "Расписание матчей";
 "matches-view-controller-first-league" = "Первая лига";
 "matches-view-controller-second-league" = "Вторая лига";
 "matches-view-controller-empty-table-title" = "Список матчей пуст";
 "matches-view-controller-empty-table-description" = "Тапните по таблице для повторного запроса";
 "matches-view-controller-day-prefix" = "День";
 "match-view-controller-vernus" = "VS";
+
+"match-view-controller-title" = "Матч";
