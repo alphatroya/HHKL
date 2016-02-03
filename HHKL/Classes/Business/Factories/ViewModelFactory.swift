@@ -27,6 +27,7 @@ class ViewModelFactory: ViewModelFactoryProtocol {
 
     func matchViewModel(flowController: FlowControllerProtocol, match: Match) -> MatchViewModelProtocol {
         let viewModel = MatchViewModel(flowController: flowController)
+        viewModel.match = match
         return viewModel
     }
 
