@@ -17,7 +17,7 @@ extension CollectionType where Generator.Element == MatchScore {
     func getResultOfMatch() -> (yellow: Int, red: Int) {
         var yellow = 0, red = 0
         for matchResult in self {
-            if matchResult.firstNumber > matchResult.secondNumber {
+            if matchResult.yellow > matchResult.red {
                 yellow += 1
             } else {
                 red += 1
@@ -29,8 +29,8 @@ extension CollectionType where Generator.Element == MatchScore {
 }
 
 struct MatchScore {
-    let firstNumber: Int
-    let secondNumber: Int
+    let yellow: Int
+    let red: Int
 }
 
 enum MatchStatus: Int {

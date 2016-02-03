@@ -23,6 +23,9 @@ class MatchViewController: ParentViewController, MatchResultViewProtocol {
     var yellowGamerNameLabel: UILabel?
     var redGamerNameLabel: UILabel?
     var scoreLabel: UILabel?
+    var firstMatchLabel: UILabel?
+    var secondMatchLabel: UILabel?
+    var thirdMatchLabel: UILabel?
 
     let scrollView = UIScrollView()
     let stackView = UIStackView()
@@ -47,6 +50,55 @@ class MatchViewController: ParentViewController, MatchResultViewProtocol {
             $0.left.equalTo(0)
         }
 
+        stackView.addArrangedSubview(createMatchResultSection())
+
+        var label = createMatchDetailedResultSection()
+        firstMatchLabel = label
+        stackView.addArrangedSubview(label)
+
+        label = createMatchDetailedResultSection()
+        secondMatchLabel = label
+        stackView.addArrangedSubview(label)
+
+        label = createMatchDetailedResultSection()
+        thirdMatchLabel = label
+        stackView.addArrangedSubview(label)
+    }
+
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        guard let match = viewModel.match else {
+            return
+        }
+        yellowGamerNameLabel?.text = match.yellow.name
+        redGamerNameLabel?.text = match.red.name
+
+        if let scoreArray = match.score where !scoreArray.isEmpty {
+            let resultMatch = scoreArray.getResultOfMatch()
+            scoreLabel?.text = "\(resultMatch.yellow) : \(resultMatch.red)"
+
+            var resultGame = scoreArray[0]
+            firstMatchLabel?.text = "\(resultGame.yellow) : \(resultGame.red)"
+            if scoreArray.count > 1 {
+                resultGame = scoreArray[1]
+                secondMatchLabel?.text = "\(resultGame.yellow) : \(resultGame.red)"
+                if scoreArray.count > 2 {
+                    resultGame = scoreArray[2]
+                    thirdMatchLabel?.text = "\(resultGame.yellow) : \(resultGame.red)"
+                }
+            }
+
+        } else {
+            scoreLabel?.text = "match-view-controller-vernus".localized()
+        }
+    }
+
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        scrollView.contentSize = CGSize(width: stackView.frame.width, height: stackView.frame.height)
+    }
+
+    private func createMatchResultSection() -> UIView {
         let matchResultStackView = UIStackView()
         matchResultStackView.distribution = .FillEqually
 
@@ -63,30 +115,15 @@ class MatchViewController: ParentViewController, MatchResultViewProtocol {
         stack.imageView.backgroundColor = UIColor.hhkl_redFlatColor()
         self.redGamerNameLabel = stack.label
         matchResultStackView.addArrangedSubview(stack.stackView)
-
-        stackView.addArrangedSubview(matchResultStackView)
+        return matchResultStackView
     }
 
-    override func viewDidAppear(animated: Bool) {
-        super.viewDidAppear(animated)
-        guard let match = viewModel.match else {
-            return
-        }
-        yellowGamerNameLabel?.text = match.yellow.name
-        redGamerNameLabel?.text = match.red.name
-
-        if let scoreArray = match.score where !scoreArray.isEmpty {
-            let result = scoreArray.getResultOfMatch()
-            scoreLabel?.text = "\(result.yellow) : \(result.red)"
-        } else {
-            scoreLabel?.text = "match-view-controller-vernus".localized()
-        }
+    private func createMatchDetailedResultSection() -> UILabel {
+        let label = UILabel()
+        label.font = UIFont.systemFontOfSize(15)
+        label.textColor = UIColor.grayColor()
+        label.textAlignment = .Center
+        return label
     }
-
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        scrollView.contentSize = CGSize(width: stackView.frame.width, height: stackView.frame.height)
-    }
-
 
 }

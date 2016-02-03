@@ -96,7 +96,7 @@ class MatchParser: ParserProtocol {
                         values in
                         let firstNumber = values[0].intValue
                         let secondNumber = values[1].intValue
-                        return MatchScore(firstNumber: firstNumber, secondNumber: secondNumber)
+                        return MatchScore(yellow: firstNumber, red: secondNumber)
                     }
                 }
 
