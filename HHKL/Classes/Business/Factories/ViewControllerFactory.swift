@@ -7,6 +7,7 @@ import Foundation
 
 enum ViewControllerType {
     case MatchesViewController
+    case MatchViewController(match: Match)
 }
 
 protocol ViewControllerFactoryProtocol {
@@ -27,11 +28,17 @@ class ViewControllerFactory: ViewControllerFactoryProtocol {
         switch type {
         case .MatchesViewController:
             return matchesViewController(viewModelFactory.matchesViewModel(flowController))
+        case .MatchViewController(let match):
+            return matchViewController(viewModelFactory.matchViewModel(flowController, match: match))
         }
     }
 
     func matchesViewController(viewModel: MatchesViewModelProtocol) -> ParentViewController {
         return MatchesViewController(viewModel: viewModel)
+    }
+
+    func matchViewController(viewModel: MatchViewModelProtocol) -> ParentViewController {
+        return MatchViewController(viewModel: viewModel)
     }
 
 

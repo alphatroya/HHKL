@@ -35,6 +35,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         appearance.barTintColor = UIColor.hhkl_mainColor()
         appearance.tintColor = UIColor.hhkl_mainColor()
         appearance.translucent = false
+        appearance.titleTextAttributes = [
+            NSForegroundColorAttributeName : UIColor.hhkl_textColor()
+        ]
 
 
         return true

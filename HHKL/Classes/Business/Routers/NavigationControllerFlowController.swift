@@ -28,8 +28,8 @@ class NavigationControllerFlowController: UINavigationController, FlowController
         return Observable.create {
             observer in
             let viewController = self.viewControllerFactory.instantiateViewControllerWith(viewControllerType, flowController: self)
+            observer.on(Event.Next(viewController))
             self.pushViewController(viewController, animated: true, completion: {
-                observer.on(Event.Next(viewController))
                 observer.on(Event.Completed)
             })
             return NopDisposable.instance
@@ -52,8 +52,8 @@ class NavigationControllerFlowController: UINavigationController, FlowController
             observer in
             flowController.parentFlowController = self
             if let viewController = flowController as? UIViewController {
+                observer.on(Event.Next(viewController))
                 self.presentViewController(viewController, animated: true, completion: {
-                    observer.on(Event.Next(viewController))
                     observer.on(Event.Completed)
                 })
             } else {

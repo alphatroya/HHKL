@@ -7,7 +7,49 @@ import UIKit
 import SnapKit
 import Chameleon
 
-class MatchCell: ParentTableViewCell {
+protocol MatchResultViewProtocol {
+
+    func createPlayerSection() -> (stackView:UIStackView, label:UILabel, imageView:UIImageView)
+
+    func createScoreLabel() -> UILabel
+
+}
+
+extension MatchResultViewProtocol {
+    func createPlayerSection() -> (stackView:UIStackView, label:UILabel, imageView:UIImageView) {
+        let stackView = UIStackView()
+        stackView.distribution = .FillProportionally
+        stackView.axis = .Vertical
+
+        let view = UIView()
+
+        let gamerAvatar = RoundImageView()
+        view.addSubview(gamerAvatar)
+        gamerAvatar.snp_makeConstraints {
+            make in
+            make.size.equalTo(CGSizeMake(50, 50))
+            make.centerX.equalTo(0)
+            make.top.bottom.equalTo(0)
+        }
+        stackView.addArrangedSubview(view)
+
+        let gamerNameLabel = UILabel()
+        gamerNameLabel.textAlignment = .Center
+        gamerNameLabel.adjustsFontSizeToFitWidth = true
+        stackView.addArrangedSubview(gamerNameLabel)
+
+        return (stackView, gamerNameLabel, gamerAvatar)
+    }
+
+    func createScoreLabel() -> UILabel {
+        let scoreLabel = UILabel()
+        scoreLabel.textAlignment = .Center
+        scoreLabel.font = UIFont.systemFontOfSize(25)
+        return scoreLabel
+    }
+}
+
+class MatchCell: ParentTableViewCell, MatchResultViewProtocol {
 
     var yellowGamerImageView: UIImageView?
     var redGamerImageView: UIImageView?
@@ -45,9 +87,7 @@ class MatchCell: ParentTableViewCell {
         yellowGamerImageView?.backgroundColor = UIColor.hhkl_yellowFlatColor()
         mainStackView.addArrangedSubview(stack.stackView)
 
-        let scoreLabel = UILabel()
-        scoreLabel.textAlignment = .Center
-        scoreLabel.font = UIFont.systemFontOfSize(25)
+        let scoreLabel = createScoreLabel()
         mainStackView.addArrangedSubview(scoreLabel)
         self.scoreLabel = scoreLabel
 
@@ -56,31 +96,6 @@ class MatchCell: ParentTableViewCell {
         redGamerImageView = stack.imageView
         redGamerImageView?.backgroundColor = UIColor.hhkl_redFlatColor()
         mainStackView.addArrangedSubview(stack.stackView)
-    }
-
-    private func createPlayerSection() -> (stackView:UIStackView, label:UILabel, imageView:UIImageView) {
-        let stackView = UIStackView()
-        stackView.distribution = .FillProportionally
-        stackView.axis = .Vertical
-
-        let view = UIView()
-
-        let gamerAvatar = RoundImageView()
-        view.addSubview(gamerAvatar)
-        gamerAvatar.snp_makeConstraints {
-            make in
-            make.size.equalTo(CGSizeMake(50, 50))
-            make.centerX.equalTo(0)
-            make.top.bottom.equalTo(0)
-        }
-        stackView.addArrangedSubview(view)
-
-        let gamerNameLabel = UILabel()
-        gamerNameLabel.textAlignment = .Center
-        gamerNameLabel.adjustsFontSizeToFitWidth = true
-        stackView.addArrangedSubview(gamerNameLabel)
-
-        return (stackView, gamerNameLabel, gamerAvatar)
     }
 
     override func prepareForReuse() {

@@ -32,6 +32,7 @@ class MatchesViewController: ParentViewController {
         segmentedControl.tintColor = UIColor.hhkl_secondaryColor()
         segmentedControl.selectedSegmentIndex = 0
         segmentedControl.addTarget(self, action: "segmentedControlPressed", forControlEvents: .ValueChanged)
+        title = "matches-view-controller-title".localized()
 
         view.addSubview(tableView)
         tableView.snp_makeConstraints {
@@ -107,6 +108,7 @@ extension MatchesViewController: UITableViewDataSource, UITableViewDelegate {
 
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        viewModel.openInformationAboutMatchAtIndexPath(indexPath)
     }
 
 }

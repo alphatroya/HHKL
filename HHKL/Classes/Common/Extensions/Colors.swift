@@ -24,4 +24,8 @@ extension UIColor {
     static func hhkl_redFlatColor() -> UIColor {
         return UIColor.flatRedColor()
     }
+
+    static func hhkl_textColor() -> UIColor {
+        return UIColor(contrastingBlackOrWhiteColorOn:UIColor.hhkl_mainColor(), isFlat: true)
+    }
 }

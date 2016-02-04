@@ -7,6 +7,7 @@ import Foundation
 
 protocol ViewModelFactoryProtocol {
     func matchesViewModel(flowController: FlowControllerProtocol) -> MatchesViewModelProtocol
+    func matchViewModel(flowController: FlowControllerProtocol, match: Match) -> MatchViewModelProtocol
 }
 
 class ViewModelFactory: ViewModelFactoryProtocol {
@@ -23,4 +24,11 @@ class ViewModelFactory: ViewModelFactoryProtocol {
         viewModel.dayParser = accessoryFactory.dayParser
         return viewModel
     }
+
+    func matchViewModel(flowController: FlowControllerProtocol, match: Match) -> MatchViewModelProtocol {
+        let viewModel = MatchViewModel(flowController: flowController)
+        viewModel.match = match
+        return viewModel
+    }
+
 }
