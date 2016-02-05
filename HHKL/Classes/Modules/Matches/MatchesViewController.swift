@@ -63,7 +63,7 @@ class MatchesViewController: ParentViewController {
             self.dataLoading = false
             self.tableView.reloadData()
             if case Event.Next(let x) = $0 {
-                self.tableView.scrollToRowAtIndexPath(x.findFirstActiveDay(), atScrollPosition: .Top, animated: true)
+                self.tableView.scrollToRowAtIndexPath(x.findLastActiveDay(), atScrollPosition: .Top, animated: true)
             }
         }
         .addDisposableTo(self.disposeBag)

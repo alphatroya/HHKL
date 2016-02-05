@@ -12,10 +12,11 @@ struct Day {
 }
 
 extension CollectionType where Generator.Element == Day {
-    func findFirstActiveDay() -> NSIndexPath {
-        for (index, day) in self.enumerate() {
-            if !day.active {
-                return NSIndexPath(forRow: 0, inSection: index)
+    func findLastActiveDay() -> NSIndexPath {
+        for (index, day) in self.reverse().enumerate() {
+            if day.active {
+                let section = Int(self.count.toIntMax()) - 1 - index
+                return NSIndexPath(forRow: 0, inSection: section)
             }
         }
         return NSIndexPath(forRow: 0, inSection: 0)
