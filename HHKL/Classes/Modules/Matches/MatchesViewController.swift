@@ -41,7 +41,7 @@ class MatchesViewController: ParentViewController {
         tableView.dataSource = self
         tableView.delegate = self
         tableView.registerClass(MatchCell.self, forCellReuseIdentifier: String(MatchCell))
-        tableView.estimatedRowHeight = 80
+        tableView.rowHeight = 80
         tableView.tableFooterView = UIView()
         tableView.emptyDataSetSource = self
         tableView.emptyDataSetDelegate = self
