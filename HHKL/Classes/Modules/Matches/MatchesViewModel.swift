@@ -41,10 +41,13 @@ class MatchesViewModel: MatchesViewModelProtocol {
             return Observable.error(Error.ClassWrongConfigured)
         }
 
-        let requestDataObservable = provider.request(.Days(league)).mapJSON().map {
+        return provider.request(.Days(league))
+        .mapJSON()
+        .map {
             return JSON($0)["days"]
-        }
-        return dayParser.parseModelArray(requestDataObservable).map {
+        }.flatMap {
+            return dayParser.parseModelArray($0)
+        }.map {
             self.dataSource = $0
             return $0
         }
