@@ -46,6 +46,8 @@
 		D41EC1F81C5F3E41008FE405 /* NetworkActivityIndicatorManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D41EC1F61C5F3E41008FE405 /* NetworkActivityIndicatorManager.framework */; };
 		D41EC1FB1C5F558F008FE405 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D41EC1FD1C5F558F008FE405 /* Localizable.strings */; };
 		D455DA301C59FB1500C3B48B /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D455DA2F1C59FB1500C3B48B /* SwiftyJSON.framework */; };
+		D46C64461C74784100978453 /* RxMoya.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D46C64451C74784100978453 /* RxMoya.framework */; };
+		D46C64481C74787B00978453 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D46C64471C74787B00978453 /* Result.framework */; };
 		D4CC1D5D1C5F58E800C1DB16 /* Localize_Swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4CC1D5C1C5F58E800C1DB16 /* Localize_Swift.framework */; };
 /* End PBXBuildFile section */
 
@@ -112,6 +114,8 @@
 		D41EC1F61C5F3E41008FE405 /* NetworkActivityIndicatorManager.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NetworkActivityIndicatorManager.framework; path = Carthage/Build/iOS/NetworkActivityIndicatorManager.framework; sourceTree = "<group>"; };
 		D41EC1FF1C5F55E6008FE405 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		D455DA2F1C59FB1500C3B48B /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
+		D46C64451C74784100978453 /* RxMoya.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxMoya.framework; path = Carthage/Build/iOS/RxMoya.framework; sourceTree = "<group>"; };
+		D46C64471C74787B00978453 /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
 		D4CC1D5C1C5F58E800C1DB16 /* Localize_Swift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Localize_Swift.framework; path = Carthage/Build/iOS/Localize_Swift.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -132,6 +136,8 @@
 				D40F57921C58DFC200348DB9 /* Chameleon.framework in Frameworks */,
 				D4CC1D5D1C5F58E800C1DB16 /* Localize_Swift.framework in Frameworks */,
 				D41EC1F31C5B5472008FE405 /* SnapKit.framework in Frameworks */,
+				D46C64481C74787B00978453 /* Result.framework in Frameworks */,
+				D46C64461C74784100978453 /* RxMoya.framework in Frameworks */,
 				D41EC1F71C5F3E41008FE405 /* DZNEmptyDataSet.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -348,6 +354,8 @@
 		D41EC1F41C5F3DC6008FE405 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D46C64471C74787B00978453 /* Result.framework */,
+				D46C64451C74784100978453 /* RxMoya.framework */,
 				D4CC1D5C1C5F58E800C1DB16 /* Localize_Swift.framework */,
 				D41EC1F51C5F3E41008FE405 /* DZNEmptyDataSet.framework */,
 				D41EC1F61C5F3E41008FE405 /* NetworkActivityIndicatorManager.framework */,
@@ -513,6 +521,8 @@
 				"$(SRCROOT)/Carthage/Build/iOS/DZNEmptyDataSet.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/NetworkActivityIndicatorManager.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Localize_Swift.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxMoya.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Result.framework",
 			);
 			name = Carthage;
 			outputPaths = (
