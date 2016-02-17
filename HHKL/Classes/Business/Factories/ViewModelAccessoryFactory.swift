@@ -5,18 +5,26 @@
 
 import NetworkActivityIndicatorManager
 import UIKit
+import RxMoya
 
 protocol ViewModelAccessoryFactoryProtocol {
-    var requestManager: RequestManagerProtocol { get }
+    var requestManager: RxMoyaProvider<MatchesNetworkTarget> { get }
     var dayParser: DayParser { get }
 }
 
 class ViewModelAccessoryFactory: ViewModelAccessoryFactoryProtocol {
 
-    var requestManager: RequestManagerProtocol {
-        let requestManager = RequestManager()
-        requestManager.host = "http://hhkl.handh.ru:666/api/"
-        requestManager.networkActivityIndicatorManager = self.networkActivityIndicatorManager
+    var requestManager: RxMoyaProvider<MatchesNetworkTarget> {
+        let networkActivityIndicatorManager = self.networkActivityIndicatorManager
+        let requestManager = RxMoyaProvider<MatchesNetworkTarget>(plugins: [NetworkActivityPlugin(networkActivityClosure: {
+            activityType in
+            switch activityType {
+            case .Began:
+                networkActivityIndicatorManager.addActivity()
+            case .Ended:
+                networkActivityIndicatorManager.removeActivity()
+            }
+        })])
         return requestManager
     }
 
