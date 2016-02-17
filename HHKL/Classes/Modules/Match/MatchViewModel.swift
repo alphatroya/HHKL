@@ -4,6 +4,7 @@
 //
 
 import Foundation
+import RxSwift
 
 protocol MatchViewModelProtocol: ViewModelProtocol {
     var match: Match? { get set }
@@ -12,6 +13,7 @@ protocol MatchViewModelProtocol: ViewModelProtocol {
 class MatchViewModel: MatchViewModelProtocol {
     var match: Match?
     var flowController: FlowControllerProtocol
+    var disposeBag: DisposeBag = DisposeBag()
 
     required init(flowController: FlowControllerProtocol) {
         self.flowController = flowController

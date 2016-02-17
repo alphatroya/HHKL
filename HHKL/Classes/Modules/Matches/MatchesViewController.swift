@@ -52,25 +52,24 @@ class MatchesViewController: ParentViewController {
         reloadData()
     }
 
-    private var dataLoading = false
+    private var requestDisposable: Disposable?
     private func reloadData() {
-        guard !dataLoading else {
-            return
+        if let requestDisposable = self.requestDisposable {
+            requestDisposable.dispose()
         }
-        dataLoading = true
-        viewModel.reloadMatches(segmentedControl.selectedSegmentIndex + 1)
+
+        let disposable = viewModel.reloadMatches(segmentedControl.selectedSegmentIndex + 1)
         .subscribe() {
-            self.dataLoading = false
             self.tableView.reloadData()
             if case Event.Next(let x) = $0 {
                 self.tableView.scrollToRowAtIndexPath(x.findLastActiveDay(), atScrollPosition: .Top, animated: true)
             }
         }
-        .addDisposableTo(self.disposeBag)
+        disposable.addDisposableTo(self.disposeBag)
+        self.requestDisposable = disposable
     }
 
     func segmentedControlPressed() {
-        self.dataLoading = false
         reloadData()
     }
 }

@@ -4,11 +4,16 @@
 //
 
 import Foundation
+import RxSwift
 
 protocol ViewModelProtocol {
     func viewDidLoad()
+
     func viewWillAppear()
+
     func viewDidAppear()
+
+    var disposeBag: DisposeBag { get }
 
     var flowController: FlowControllerProtocol { get }
     init(flowController: FlowControllerProtocol)

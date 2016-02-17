@@ -27,6 +27,7 @@ class MatchesViewModel: MatchesViewModelProtocol {
     var requestManager: RequestManagerProtocol?
     var dayParser: DayParser?
     var dataSource: [Day]?
+    var disposeBag: DisposeBag = DisposeBag()
 
     required init(flowController: FlowControllerProtocol) {
         self.flowController = flowController
@@ -98,7 +99,7 @@ class MatchesViewModel: MatchesViewModelProtocol {
             if case .Error(_) = $0 {
                 DDLogWarn("error while performing transition")
             }
-        }
+        }.addDisposableTo(disposeBag)
     }
 
 }
