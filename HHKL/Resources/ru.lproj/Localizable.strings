@@ -16,3 +16,7 @@
 "match-view-controller-vernus" = "VS";
 
 "match-view-controller-title" = "Матч";
+"match-view-controller-first-section-title" = "Первый период";
+"match-view-controller-second-section-title" = "Второй период";
+"match-view-controller-third-section-title" = "Овертайм";
+
