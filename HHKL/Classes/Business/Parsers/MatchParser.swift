@@ -9,8 +9,6 @@ import SwiftyJSON
 import CocoaLumberjackSwift
 
 
-//TODO write tests for check
-
 protocol ParserProtocol {
     typealias model
 
@@ -21,9 +19,13 @@ protocol ParserProtocol {
 
 extension ParserProtocol {
     func parseModelArray(requestResult: JSON) -> Observable<[model]> {
-        return Observable.just(requestResult).flatMap {
+        guard let array = requestResult.array else {
+            return Observable<[model]>.error(Error.ParserError)
+        }
+
+        return Observable.just(array).flatMap {
             json in
-            return json.arrayValue.map {
+            return array.map {
                 return self.parseModel($0)
             }.concat()
             .reduce([model](), accumulator: {

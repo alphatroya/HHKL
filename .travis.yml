@@ -6,4 +6,4 @@ xcode_sdk: iphonesimulator9.2
 before_script:
     - carthage bootstrap --platform iOS --no-use-binaries
 script:
-    - xctool -project HHKL.xcodeproj -scheme HHKL -sdk iphonesimulator9.2 -destination 'platform=iOS Simulator,name=iPhone 6s' ONLY_ACTIVE_ARCH=NO clean build
+    - xctool -project HHKL.xcodeproj -scheme HHKL -sdk iphonesimulator9.2 -destination 'platform=iOS Simulator,name=iPhone 6s' ONLY_ACTIVE_ARCH=NO clean test 
