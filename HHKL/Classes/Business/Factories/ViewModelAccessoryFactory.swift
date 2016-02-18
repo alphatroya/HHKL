@@ -16,8 +16,7 @@ class ViewModelAccessoryFactory: ViewModelAccessoryFactoryProtocol {
 
     var requestManager: RxMoyaProvider<MatchesNetworkTarget> {
         let networkActivityIndicatorManager = self.networkActivityIndicatorManager
-        //TODO remove stub block
-        let requestManager = RxMoyaProvider<MatchesNetworkTarget>(stubClosure: MoyaProvider.ImmediatelyStub, plugins: [NetworkActivityPlugin(networkActivityClosure: {
+        let requestManager = RxMoyaProvider<MatchesNetworkTarget>(plugins: [NetworkActivityPlugin(networkActivityClosure: {
             activityType in
             switch activityType {
             case .Began:
