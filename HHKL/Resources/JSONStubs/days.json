@@ -1,0 +1,2251 @@
+{
+  "days": [
+    {
+      "matches": [
+        {
+          "status": 3,
+          "score": [
+            [
+              7,
+              10
+            ],
+            [
+              5,
+              10
+            ]
+          ],
+          "id": 3,
+          "yellow": {
+            "alias": "APN",
+            "id": 4,
+            "name": "Алексей П"
+          },
+          "red": {
+            "alias": "DEN",
+            "id": 7,
+            "name": "Денис"
+          }
+        },
+        {
+          "status": 3,
+          "score": [
+            [
+              10,
+              9
+            ],
+            [
+              5,
+              10
+            ],
+            [
+              7,
+              10
+            ]
+          ],
+          "id": 2,
+          "yellow": {
+            "alias": "ASM",
+            "id": 6,
+            "name": "Александр С"
+          },
+          "red": {
+            "alias": "MIH",
+            "id": 5,
+            "name": "Михаил"
+          }
+        },
+        {
+          "status": 3,
+          "score": [
+            [
+              2,
+              10
+            ],
+            [
+              6,
+              10
+            ]
+          ],
+          "id": 4,
+          "yellow": {
+            "alias": "ABS",
+            "id": 1,
+            "name": "Александр Б"
+          },
+          "red": {
+            "alias": "EVG",
+            "id": 8,
+            "name": "Евгений"
+          }
+        },
+        {
+          "status": 3,
+          "score": [
+            [
+              9,
+              10
+            ],
+            [
+              10,
+              4
+            ],
+            [
+              5,
+              10
+            ]
+          ],
+          "id": 1,
+          "yellow": {
+            "alias": "IGR",
+            "id": 3,
+            "name": "Игорь"
+          },
+          "red": {
+            "alias": "ART",
+            "id": 2,
+            "name": "Артем"
+          }
+        }
+      ],
+      "active": true,
+      "name": 1
+    },
+    {
+      "matches": [
+        {
+          "status": 3,
+          "score": [
+            [
+              2,
+              10
+            ],
+            [
+              2,
+              10
+            ]
+          ],
+          "id": 8,
+          "yellow": {
+            "alias": "MIH",
+            "id": 5,
+            "name": "Михаил"
+          },
+          "red": {
+            "alias": "EVG",
+            "id": 8,
+            "name": "Евгений"
+          }
+        },
+        {
+          "status": 3,
+          "score": [
+            [
+              9,
+              10
+            ],
+            [
+              4,
+              10
+            ]
+          ],
+          "id": 7,
+          "yellow": {
+            "alias": "ASM",
+            "id": 6,
+            "name": "Александр С"
+          },
+          "red": {
+            "alias": "ART",
+            "id": 2,
+            "name": "Артем"
+          }
+        },
+        {
+          "status": 3,
+          "score": [
+            [
+              3,
+              10
+            ],
+            [
+              4,
+              10
+            ]
+          ],
+          "id": 6,
+          "yellow": {
+            "alias": "APN",
+            "id": 4,
+            "name": "Алексей П"
+          },
+          "red": {
+            "alias": "ABS",
+            "id": 1,
+            "name": "Александр Б"
+          }
+        },
+        {
+          "status": 3,
+          "score": [
+            [
+              10,
+              4
+            ],
+            [
+              9,
+              10
+            ],
+            [
+              10,
+              5
+            ]
+          ],
+          "id": 5,
+          "yellow": {
+            "alias": "DEN",
+            "id": 7,
+            "name": "Денис"
+          },
+          "red": {
+            "alias": "IGR",
+            "id": 3,
+            "name": "Игорь"
+          }
+        }
+      ],
+      "active": true,
+      "name": 2
+    },
+    {
+      "matches": [
+        {
+          "status": 3,
+          "score": [
+            [
+              10,
+              4
+            ],
+            [
+              10,
+              1
+            ]
+          ],
+          "id": 12,
+          "yellow": {
+            "alias": "EVG",
+            "id": 8,
+            "name": "Евгений"
+          },
+          "red": {
+            "alias": "IGR",
+            "id": 3,
+            "name": "Игорь"
+          }
+        },
+        {
+          "status": 3,
+          "score": [
+            [
+              10,
+              5
+            ],
+            [
+              10,
+              1
+            ]
+          ],
+          "id": 11,
+          "yellow": {
+            "alias": "ART",
+            "id": 2,
+            "name": "Артем"
+          },
+          "red": {
+            "alias": "APN",
+            "id": 4,
+            "name": "Алексей П"
+          }
+        },
+        {
+          "status": 3,
+          "score": [
+            [
+              6,
+              10
+            ],
+            [
+              10,
+              4
+            ],
+            [
+              10,
+              8
+            ]
+          ],
+          "id": 10,
+          "yellow": {
+            "alias": "DEN",
+            "id": 7,
+            "name": "Денис"
+          },
+          "red": {
+            "alias": "ASM",
+            "id": 6,
+            "name": "Александр С"
+          }
+        },
+        {
+          "status": 3,
+          "score": [
+            [
+              10,
+              8
+            ],
+            [
+              10,
+              4
+            ]
+          ],
+          "id": 9,
+          "yellow": {
+            "alias": "MIH",
+            "id": 5,
+            "name": "Михаил"
+          },
+          "red": {
+            "alias": "ABS",
+            "id": 1,
+            "name": "Александр Б"
+          }
+        }
+      ],
+      "active": true,
+      "name": 3
+    },
+    {
+      "matches": [
+        {
+          "status": 3,
+          "score": [
+            [
+              2,
+              10
+            ],
+            [
+              10,
+              6
+            ],
+            [
+              10,
+              5
+            ]
+          ],
+          "id": 14,
+          "yellow": {
+            "alias": "EVG",
+            "id": 8,
+            "name": "Евгений"
+          },
+          "red": {
+            "alias": "ASM",
+            "id": 6,
+            "name": "Александр С"
+          }
+        },
+        {
+          "status": 3,
+          "score": [
+            [
+              10,
+              9
+            ],
+            [
+              6,
+              10
+            ],
+            [
+              10,
+              9
+            ]
+          ],
+          "id": 16,
+          "yellow": {
+            "alias": "IGR",
+            "id": 3,
+            "name": "Игорь"
+          },
+          "red": {
+            "alias": "ABS",
+            "id": 1,
+            "name": "Александр Б"
+          }
+        },
+        {
+          "status": 3,
+          "score": [
+            [
+              10,
+              6
+            ],
+            [
+              10,
+              9
+            ]
+          ],
+          "id": 15,
+          "yellow": {
+            "alias": "MIH",
+            "id": 5,
+            "name": "Михаил"
+          },
+          "red": {
+            "alias": "APN",
+            "id": 4,
+            "name": "Алексей П"
+          }
+        },
+        {
+          "status": 3,
+          "score": [
+            [
+              10,
+              9
+            ],
+            [
+              4,
+              10
+            ],
+            [
+              7,
+              10
+            ]
+          ],
+          "id": 13,
+          "yellow": {
+            "alias": "DEN",
+            "id": 7,
+            "name": "Денис"
+          },
+          "red": {
+            "alias": "ART",
+            "id": 2,
+            "name": "Артем"
+          }
+        }
+      ],
+      "active": true,
+      "name": 4
+    },
+    {
+      "matches": [
+        {
+          "status": 3,
+          "score": [
+            [
+              8,
+              10
+            ],
+            [
+              7,
+              10
+            ]
+          ],
+          "id": 20,
+          "yellow": {
+            "alias": "IGR",
+            "id": 3,
+            "name": "Игорь"
+          },
+          "red": {
+            "alias": "MIH",
+            "id": 5,
+            "name": "Михаил"
+          }
+        },
+        {
+          "status": 3,
+          "score": [
+            [
+              7,
+              10
+            ],
+            [
+              6,
+              10
+            ]
+          ],
+          "id": 19,
+          "yellow": {
+            "alias": "ABS",
+            "id": 1,
+            "name": "Александр Б"
+          },
+          "red": {
+            "alias": "DEN",
+            "id": 7,
+            "name": "Денис"
+          }
+        },
+        {
+          "status": 3,
+          "score": [
+            [
+              10,
+              8
+            ],
+            [
+              10,
+              4
+            ]
+          ],
+          "id": 18,
+          "yellow": {
+            "alias": "ASM",
+            "id": 6,
+            "name": "Александр С"
+          },
+          "red": {
+            "alias": "APN",
+            "id": 4,
+            "name": "Алексей П"
+          }
+        },
+        {
+          "status": 3,
+          "score": [
+            [
+              7,
+              10
+            ],
+            [
+              8,
+              10
+            ]
+          ],
+          "id": 17,
+          "yellow": {
+            "alias": "ART",
+            "id": 2,
+            "name": "Артем"
+          },
+          "red": {
+            "alias": "EVG",
+            "id": 8,
+            "name": "Евгений"
+          }
+        }
+      ],
+      "active": true,
+      "name": 5
+    },
+    {
+      "matches": [
+        {
+          "status": 3,
+          "score": [
+            [
+              10,
+              4
+            ],
+            [
+              10,
+              4
+            ]
+          ],
+          "id": 24,
+          "yellow": {
+            "alias": "ART",
+            "id": 2,
+            "name": "Артем"
+          },
+          "red": {
+            "alias": "ABS",
+            "id": 1,
+            "name": "Александр Б"
+          }
+        },
+        {
+          "status": 3,
+          "score": [
+            [
+              10,
+              2
+            ],
+            [
+              8,
+              10
+            ],
+            [
+              10,
+              9
+            ]
+          ],
+          "id": 23,
+          "yellow": {
+            "alias": "DEN",
+            "id": 7,
+            "name": "Денис"
+          },
+          "red": {
+            "alias": "MIH",
+            "id": 5,
+            "name": "Михаил"
+          }
+        },
+        {
+          "status": 3,
+          "score": [
+            [
+              10,
+              9
+            ],
+            [
+              10,
+              2
+            ]
+          ],
+          "id": 22,
+          "yellow": {
+            "alias": "ASM",
+            "id": 6,
+            "name": "Александр С"
+          },
+          "red": {
+            "alias": "IGR",
+            "id": 3,
+            "name": "Игорь"
+          }
+        },
+        {
+          "status": 3,
+          "score": [
+            [
+              5,
+              10
+            ],
+            [
+              0,
+              10
+            ]
+          ],
+          "id": 21,
+          "yellow": {
+            "alias": "APN",
+            "id": 4,
+            "name": "Алексей П"
+          },
+          "red": {
+            "alias": "EVG",
+            "id": 8,
+            "name": "Евгений"
+          }
+        }
+      ],
+      "active": true,
+      "name": 6
+    },
+    {
+      "matches": [
+        {
+          "status": 3,
+          "score": [
+            [
+              2,
+              10
+            ],
+            [
+              10,
+              7
+            ],
+            [
+              8,
+              10
+            ]
+          ],
+          "id": 28,
+          "yellow": {
+            "alias": "ABS",
+            "id": 1,
+            "name": "Александр Б"
+          },
+          "red": {
+            "alias": "ASM",
+            "id": 6,
+            "name": "Александр С"
+          }
+        },
+        {
+          "status": 3,
+          "score": [
+            [
+              6,
+              10
+            ],
+            [
+              5,
+              10
+            ]
+          ],
+          "id": 27,
+          "yellow": {
+            "alias": "MIH",
+            "id": 5,
+            "name": "Михаил"
+          },
+          "red": {
+            "alias": "ART",
+            "id": 2,
+            "name": "Артем"
+          }
+        },
+        {
+          "status": 3,
+          "score": [
+            [
+              10,
+              6
+            ],
+            [
+              9,
+              10
+            ],
+            [
+              3,
+              10
+            ]
+          ],
+          "id": 26,
+          "yellow": {
+            "alias": "IGR",
+            "id": 3,
+            "name": "Игорь"
+          },
+          "red": {
+            "alias": "APN",
+            "id": 4,
+            "name": "Алексей П"
+          }
+        },
+        {
+          "status": 3,
+          "score": [
+            [
+              10,
+              8
+            ],
+            [
+              10,
+              3
+            ]
+          ],
+          "id": 25,
+          "yellow": {
+            "alias": "EVG",
+            "id": 8,
+            "name": "Евгений"
+          },
+          "red": {
+            "alias": "DEN",
+            "id": 7,
+            "name": "Денис"
+          }
+        }
+      ],
+      "active": true,
+      "name": 7
+    },
+    {
+      "matches": [
+        {
+          "status": 3,
+          "score": [
+            [
+              9,
+              10
+            ],
+            [
+              4,
+              10
+            ]
+          ],
+          "id": 32,
+          "yellow": {
+            "alias": "IGR",
+            "id": 3,
+            "name": "Игорь"
+          },
+          "red": {
+            "alias": "EVG",
+            "id": 8,
+            "name": "Евгений"
+          }
+        },
+        {
+          "status": 3,
+          "score": [
+            [
+              4,
+              10
+            ],
+            [
+              6,
+              10
+            ]
+          ],
+          "id": 31,
+          "yellow": {
+            "alias": "ASM",
+            "id": 6,
+            "name": "Александр С"
+          },
+          "red": {
+            "alias": "DEN",
+            "id": 7,
+            "name": "Денис"
+          }
+        },
+        {
+          "status": 3,
+          "score": [
+            [
+              10,
+              6
+            ],
+            [
+              10,
+              2
+            ]
+          ],
+          "id": 30,
+          "yellow": {
+            "alias": "ABS",
+            "id": 1,
+            "name": "Александр Б"
+          },
+          "red": {
+            "alias": "MIH",
+            "id": 5,
+            "name": "Михаил"
+          }
+        },
+        {
+          "status": 3,
+          "score": [
+            [
+              4,
+              10
+            ],
+            [
+              2,
+              10
+            ]
+          ],
+          "id": 29,
+          "yellow": {
+            "alias": "APN",
+            "id": 4,
+            "name": "Алексей П"
+          },
+          "red": {
+            "alias": "ART",
+            "id": 2,
+            "name": "Артем"
+          }
+        }
+      ],
+      "active": true,
+      "name": 8
+    },
+    {
+      "matches": [
+        {
+          "status": 3,
+          "score": [
+            [
+              8,
+              10
+            ],
+            [
+              10,
+              3
+            ],
+            [
+              4,
+              10
+            ]
+          ],
+          "id": 36,
+          "yellow": {
+            "alias": "EVG",
+            "id": 8,
+            "name": "Евгений"
+          },
+          "red": {
+            "alias": "ART",
+            "id": 2,
+            "name": "Артем"
+          }
+        },
+        {
+          "status": 3,
+          "score": [
+            [
+              10,
+              9
+            ],
+            [
+              10,
+              7
+            ]
+          ],
+          "id": 35,
+          "yellow": {
+            "alias": "MIH",
+            "id": 5,
+            "name": "Михаил"
+          },
+          "red": {
+            "alias": "IGR",
+            "id": 3,
+            "name": "Игорь"
+          }
+        },
+        {
+          "status": 3,
+          "score": [
+            [
+              6,
+              10
+            ],
+            [
+              6,
+              10
+            ]
+          ],
+          "id": 34,
+          "yellow": {
+            "alias": "APN",
+            "id": 4,
+            "name": "Алексей П"
+          },
+          "red": {
+            "alias": "ASM",
+            "id": 6,
+            "name": "Александр С"
+          }
+        },
+        {
+          "status": 3,
+          "score": [
+            [
+              10,
+              4
+            ],
+            [
+              10,
+              5
+            ]
+          ],
+          "id": 33,
+          "yellow": {
+            "alias": "DEN",
+            "id": 7,
+            "name": "Денис"
+          },
+          "red": {
+            "alias": "ABS",
+            "id": 1,
+            "name": "Александр Б"
+          }
+        }
+      ],
+      "active": true,
+      "name": 9
+    },
+    {
+      "matches": [
+        {
+          "status": 3,
+          "score": [
+            [
+              8,
+              10
+            ],
+            [
+              6,
+              10
+            ]
+          ],
+          "id": 39,
+          "yellow": {
+            "alias": "ART",
+            "id": 2,
+            "name": "Артем"
+          },
+          "red": {
+            "alias": "DEN",
+            "id": 7,
+            "name": "Денис"
+          }
+        },
+        {
+          "status": 3,
+          "score": [
+            [
+              9,
+              10
+            ],
+            [
+              5,
+              10
+            ]
+          ],
+          "id": 40,
+          "yellow": {
+            "alias": "ASM",
+            "id": 6,
+            "name": "Александр С"
+          },
+          "red": {
+            "alias": "EVG",
+            "id": 8,
+            "name": "Евгений"
+          }
+        },
+        {
+          "status": 3,
+          "score": [
+            [
+              6,
+              10
+            ],
+            [
+              10,
+              4
+            ],
+            [
+              10,
+              2
+            ]
+          ],
+          "id": 38,
+          "yellow": {
+            "alias": "ABS",
+            "id": 1,
+            "name": "Александр Б"
+          },
+          "red": {
+            "alias": "IGR",
+            "id": 3,
+            "name": "Игорь"
+          }
+        },
+        {
+          "status": 0,
+          "score": [],
+          "id": 37,
+          "yellow": {
+            "alias": "APN",
+            "id": 4,
+            "name": "Алексей П"
+          },
+          "red": {
+            "alias": "MIH",
+            "id": 5,
+            "name": "Михаил"
+          }
+        }
+      ],
+      "active": true,
+      "name": 10
+    },
+    {
+      "matches": [
+        {
+          "status": 0,
+          "score": [],
+          "id": 44,
+          "yellow": {
+            "alias": "APN",
+            "id": 4,
+            "name": "Алексей П"
+          },
+          "red": {
+            "alias": "IGR",
+            "id": 3,
+            "name": "Игорь"
+          }
+        },
+        {
+          "status": 0,
+          "score": [],
+          "id": 43,
+          "yellow": {
+            "alias": "DEN",
+            "id": 7,
+            "name": "Денис"
+          },
+          "red": {
+            "alias": "EVG",
+            "id": 8,
+            "name": "Евгений"
+          }
+        },
+        {
+          "status": 0,
+          "score": [],
+          "id": 42,
+          "yellow": {
+            "alias": "ART",
+            "id": 2,
+            "name": "Артем"
+          },
+          "red": {
+            "alias": "MIH",
+            "id": 5,
+            "name": "Михаил"
+          }
+        },
+        {
+          "status": 0,
+          "score": [],
+          "id": 41,
+          "yellow": {
+            "alias": "ASM",
+            "id": 6,
+            "name": "Александр С"
+          },
+          "red": {
+            "alias": "ABS",
+            "id": 1,
+            "name": "Александр Б"
+          }
+        }
+      ],
+      "active": false,
+      "name": 11
+    },
+    {
+      "matches": [
+        {
+          "status": 0,
+          "score": [],
+          "id": 48,
+          "yellow": {
+            "alias": "IGR",
+            "id": 3,
+            "name": "Игорь"
+          },
+          "red": {
+            "alias": "ASM",
+            "id": 6,
+            "name": "Александр С"
+          }
+        },
+        {
+          "status": 0,
+          "score": [],
+          "id": 47,
+          "yellow": {
+            "alias": "ABS",
+            "id": 1,
+            "name": "Александр Б"
+          },
+          "red": {
+            "alias": "ART",
+            "id": 2,
+            "name": "Артем"
+          }
+        },
+        {
+          "status": 0,
+          "score": [],
+          "id": 46,
+          "yellow": {
+            "alias": "EVG",
+            "id": 8,
+            "name": "Евгений"
+          },
+          "red": {
+            "alias": "APN",
+            "id": 4,
+            "name": "Алексей П"
+          }
+        },
+        {
+          "status": 0,
+          "score": [],
+          "id": 45,
+          "yellow": {
+            "alias": "MIH",
+            "id": 5,
+            "name": "Михаил"
+          },
+          "red": {
+            "alias": "DEN",
+            "id": 7,
+            "name": "Денис"
+          }
+        }
+      ],
+      "active": false,
+      "name": 12
+    },
+    {
+      "matches": [
+        {
+          "status": 0,
+          "score": [],
+          "id": 52,
+          "yellow": {
+            "alias": "IGR",
+            "id": 3,
+            "name": "Игорь"
+          },
+          "red": {
+            "alias": "DEN",
+            "id": 7,
+            "name": "Денис"
+          }
+        },
+        {
+          "status": 0,
+          "score": [],
+          "id": 51,
+          "yellow": {
+            "alias": "ABS",
+            "id": 1,
+            "name": "Александр Б"
+          },
+          "red": {
+            "alias": "APN",
+            "id": 4,
+            "name": "Алексей П"
+          }
+        },
+        {
+          "status": 0,
+          "score": [],
+          "id": 50,
+          "yellow": {
+            "alias": "ART",
+            "id": 2,
+            "name": "Артем"
+          },
+          "red": {
+            "alias": "ASM",
+            "id": 6,
+            "name": "Александр С"
+          }
+        },
+        {
+          "status": 0,
+          "score": [],
+          "id": 49,
+          "yellow": {
+            "alias": "EVG",
+            "id": 8,
+            "name": "Евгений"
+          },
+          "red": {
+            "alias": "MIH",
+            "id": 5,
+            "name": "Михаил"
+          }
+        }
+      ],
+      "active": false,
+      "name": 13
+    },
+    {
+      "matches": [
+        {
+          "status": 0,
+          "score": [],
+          "id": 56,
+          "yellow": {
+            "alias": "ART",
+            "id": 2,
+            "name": "Артем"
+          },
+          "red": {
+            "alias": "IGR",
+            "id": 3,
+            "name": "Игорь"
+          }
+        },
+        {
+          "status": 0,
+          "score": [],
+          "id": 55,
+          "yellow": {
+            "alias": "EVG",
+            "id": 8,
+            "name": "Евгений"
+          },
+          "red": {
+            "alias": "ABS",
+            "id": 1,
+            "name": "Александр Б"
+          }
+        },
+        {
+          "status": 0,
+          "score": [],
+          "id": 54,
+          "yellow": {
+            "alias": "DEN",
+            "id": 7,
+            "name": "Денис"
+          },
+          "red": {
+            "alias": "APN",
+            "id": 4,
+            "name": "Алексей П"
+          }
+        },
+        {
+          "status": 0,
+          "score": [],
+          "id": 53,
+          "yellow": {
+            "alias": "MIH",
+            "id": 5,
+            "name": "Михаил"
+          },
+          "red": {
+            "alias": "ASM",
+            "id": 6,
+            "name": "Александр С"
+          }
+        }
+      ],
+      "active": false,
+      "name": 14
+    },
+    {
+      "matches": [
+        {
+          "status": 0,
+          "score": [],
+          "id": 60,
+          "yellow": {
+            "alias": "IGR",
+            "id": 3,
+            "name": "Игорь"
+          },
+          "red": {
+            "alias": "MIH",
+            "id": 5,
+            "name": "Михаил"
+          }
+        },
+        {
+          "status": 0,
+          "score": [],
+          "id": 59,
+          "yellow": {
+            "alias": "ABS",
+            "id": 1,
+            "name": "Александр Б"
+          },
+          "red": {
+            "alias": "DEN",
+            "id": 7,
+            "name": "Денис"
+          }
+        },
+        {
+          "status": 0,
+          "score": [],
+          "id": 58,
+          "yellow": {
+            "alias": "ASM",
+            "id": 6,
+            "name": "Александр С"
+          },
+          "red": {
+            "alias": "APN",
+            "id": 4,
+            "name": "Алексей П"
+          }
+        },
+        {
+          "status": 0,
+          "score": [],
+          "id": 57,
+          "yellow": {
+            "alias": "ART",
+            "id": 2,
+            "name": "Артем"
+          },
+          "red": {
+            "alias": "EVG",
+            "id": 8,
+            "name": "Евгений"
+          }
+        }
+      ],
+      "active": false,
+      "name": 15
+    },
+    {
+      "matches": [
+        {
+          "status": 0,
+          "score": [],
+          "id": 64,
+          "yellow": {
+            "alias": "IGR",
+            "id": 3,
+            "name": "Игорь"
+          },
+          "red": {
+            "alias": "ABS",
+            "id": 1,
+            "name": "Александр Б"
+          }
+        },
+        {
+          "status": 0,
+          "score": [],
+          "id": 63,
+          "yellow": {
+            "alias": "EVG",
+            "id": 8,
+            "name": "Евгений"
+          },
+          "red": {
+            "alias": "ASM",
+            "id": 6,
+            "name": "Александр С"
+          }
+        },
+        {
+          "status": 0,
+          "score": [],
+          "id": 62,
+          "yellow": {
+            "alias": "MIH",
+            "id": 5,
+            "name": "Михаил"
+          },
+          "red": {
+            "alias": "APN",
+            "id": 4,
+            "name": "Алексей П"
+          }
+        },
+        {
+          "status": 0,
+          "score": [],
+          "id": 61,
+          "yellow": {
+            "alias": "DEN",
+            "id": 7,
+            "name": "Денис"
+          },
+          "red": {
+            "alias": "ART",
+            "id": 2,
+            "name": "Артем"
+          }
+        }
+      ],
+      "active": false,
+      "name": 16
+    },
+    {
+      "matches": [
+        {
+          "status": 0,
+          "score": [],
+          "id": 68,
+          "yellow": {
+            "alias": "ART",
+            "id": 2,
+            "name": "Артем"
+          },
+          "red": {
+            "alias": "APN",
+            "id": 4,
+            "name": "Алексей П"
+          }
+        },
+        {
+          "status": 0,
+          "score": [],
+          "id": 67,
+          "yellow": {
+            "alias": "DEN",
+            "id": 7,
+            "name": "Денис"
+          },
+          "red": {
+            "alias": "ASM",
+            "id": 6,
+            "name": "Александр С"
+          }
+        },
+        {
+          "status": 0,
+          "score": [],
+          "id": 66,
+          "yellow": {
+            "alias": "EVG",
+            "id": 8,
+            "name": "Евгений"
+          },
+          "red": {
+            "alias": "IGR",
+            "id": 3,
+            "name": "Игорь"
+          }
+        },
+        {
+          "status": 0,
+          "score": [],
+          "id": 65,
+          "yellow": {
+            "alias": "MIH",
+            "id": 5,
+            "name": "Михаил"
+          },
+          "red": {
+            "alias": "ABS",
+            "id": 1,
+            "name": "Александр Б"
+          }
+        }
+      ],
+      "active": false,
+      "name": 17
+    },
+    {
+      "matches": [
+        {
+          "status": 0,
+          "score": [],
+          "id": 72,
+          "yellow": {
+            "alias": "DEN",
+            "id": 7,
+            "name": "Денис"
+          },
+          "red": {
+            "alias": "MIH",
+            "id": 5,
+            "name": "Михаил"
+          }
+        },
+        {
+          "status": 0,
+          "score": [],
+          "id": 71,
+          "yellow": {
+            "alias": "APN",
+            "id": 4,
+            "name": "Алексей П"
+          },
+          "red": {
+            "alias": "EVG",
+            "id": 8,
+            "name": "Евгений"
+          }
+        },
+        {
+          "status": 0,
+          "score": [],
+          "id": 70,
+          "yellow": {
+            "alias": "ART",
+            "id": 2,
+            "name": "Артем"
+          },
+          "red": {
+            "alias": "ABS",
+            "id": 1,
+            "name": "Александр Б"
+          }
+        },
+        {
+          "status": 0,
+          "score": [],
+          "id": 69,
+          "yellow": {
+            "alias": "ASM",
+            "id": 6,
+            "name": "Александр С"
+          },
+          "red": {
+            "alias": "IGR",
+            "id": 3,
+            "name": "Игорь"
+          }
+        }
+      ],
+      "active": false,
+      "name": 18
+    },
+    {
+      "matches": [
+        {
+          "status": 0,
+          "score": [],
+          "id": 76,
+          "yellow": {
+            "alias": "ASM",
+            "id": 6,
+            "name": "Александр С"
+          },
+          "red": {
+            "alias": "ART",
+            "id": 2,
+            "name": "Артем"
+          }
+        },
+        {
+          "status": 0,
+          "score": [],
+          "id": 75,
+          "yellow": {
+            "alias": "DEN",
+            "id": 7,
+            "name": "Денис"
+          },
+          "red": {
+            "alias": "IGR",
+            "id": 3,
+            "name": "Игорь"
+          }
+        },
+        {
+          "status": 0,
+          "score": [],
+          "id": 74,
+          "yellow": {
+            "alias": "MIH",
+            "id": 5,
+            "name": "Михаил"
+          },
+          "red": {
+            "alias": "EVG",
+            "id": 8,
+            "name": "Евгений"
+          }
+        },
+        {
+          "status": 0,
+          "score": [],
+          "id": 73,
+          "yellow": {
+            "alias": "APN",
+            "id": 4,
+            "name": "Алексей П"
+          },
+          "red": {
+            "alias": "ABS",
+            "id": 1,
+            "name": "Александр Б"
+          }
+        }
+      ],
+      "active": false,
+      "name": 19
+    },
+    {
+      "matches": [
+        {
+          "status": 0,
+          "score": [],
+          "id": 80,
+          "yellow": {
+            "alias": "IGR",
+            "id": 3,
+            "name": "Игорь"
+          },
+          "red": {
+            "alias": "ART",
+            "id": 2,
+            "name": "Артем"
+          }
+        },
+        {
+          "status": 0,
+          "score": [],
+          "id": 79,
+          "yellow": {
+            "alias": "ASM",
+            "id": 6,
+            "name": "Александр С"
+          },
+          "red": {
+            "alias": "MIH",
+            "id": 5,
+            "name": "Михаил"
+          }
+        },
+        {
+          "status": 0,
+          "score": [],
+          "id": 78,
+          "yellow": {
+            "alias": "ABS",
+            "id": 1,
+            "name": "Александр Б"
+          },
+          "red": {
+            "alias": "EVG",
+            "id": 8,
+            "name": "Евгений"
+          }
+        },
+        {
+          "status": 0,
+          "score": [],
+          "id": 77,
+          "yellow": {
+            "alias": "APN",
+            "id": 4,
+            "name": "Алексей П"
+          },
+          "red": {
+            "alias": "DEN",
+            "id": 7,
+            "name": "Денис"
+          }
+        }
+      ],
+      "active": false,
+      "name": 20
+    },
+    {
+      "matches": [
+        {
+          "status": 0,
+          "score": [],
+          "id": 84,
+          "yellow": {
+            "alias": "MIH",
+            "id": 5,
+            "name": "Михаил"
+          },
+          "red": {
+            "alias": "ART",
+            "id": 2,
+            "name": "Артем"
+          }
+        },
+        {
+          "status": 0,
+          "score": [],
+          "id": 83,
+          "yellow": {
+            "alias": "EVG",
+            "id": 8,
+            "name": "Евгений"
+          },
+          "red": {
+            "alias": "DEN",
+            "id": 7,
+            "name": "Денис"
+          }
+        },
+        {
+          "status": 0,
+          "score": [],
+          "id": 82,
+          "yellow": {
+            "alias": "IGR",
+            "id": 3,
+            "name": "Игорь"
+          },
+          "red": {
+            "alias": "APN",
+            "id": 4,
+            "name": "Алексей П"
+          }
+        },
+        {
+          "status": 0,
+          "score": [],
+          "id": 81,
+          "yellow": {
+            "alias": "ABS",
+            "id": 1,
+            "name": "Александр Б"
+          },
+          "red": {
+            "alias": "ASM",
+            "id": 6,
+            "name": "Александр С"
+          }
+        }
+      ],
+      "active": false,
+      "name": 21
+    },
+    {
+      "matches": [
+        {
+          "status": 0,
+          "score": [],
+          "id": 88,
+          "yellow": {
+            "alias": "MIH",
+            "id": 5,
+            "name": "Михаил"
+          },
+          "red": {
+            "alias": "IGR",
+            "id": 3,
+            "name": "Игорь"
+          }
+        },
+        {
+          "status": 0,
+          "score": [],
+          "id": 87,
+          "yellow": {
+            "alias": "EVG",
+            "id": 8,
+            "name": "Евгений"
+          },
+          "red": {
+            "alias": "ART",
+            "id": 2,
+            "name": "Артем"
+          }
+        },
+        {
+          "status": 0,
+          "score": [],
+          "id": 86,
+          "yellow": {
+            "alias": "APN",
+            "id": 4,
+            "name": "Алексей П"
+          },
+          "red": {
+            "alias": "ASM",
+            "id": 6,
+            "name": "Александр С"
+          }
+        },
+        {
+          "status": 0,
+          "score": [],
+          "id": 85,
+          "yellow": {
+            "alias": "DEN",
+            "id": 7,
+            "name": "Денис"
+          },
+          "red": {
+            "alias": "ABS",
+            "id": 1,
+            "name": "Александр Б"
+          }
+        }
+      ],
+      "active": false,
+      "name": 22
+    },
+    {
+      "matches": [
+        {
+          "status": 0,
+          "score": [],
+          "id": 92,
+          "yellow": {
+            "alias": "APN",
+            "id": 4,
+            "name": "Алексей П"
+          },
+          "red": {
+            "alias": "IGR",
+            "id": 3,
+            "name": "Игорь"
+          }
+        },
+        {
+          "status": 0,
+          "score": [],
+          "id": 91,
+          "yellow": {
+            "alias": "DEN",
+            "id": 7,
+            "name": "Денис"
+          },
+          "red": {
+            "alias": "EVG",
+            "id": 8,
+            "name": "Евгений"
+          }
+        },
+        {
+          "status": 0,
+          "score": [],
+          "id": 90,
+          "yellow": {
+            "alias": "ART",
+            "id": 2,
+            "name": "Артем"
+          },
+          "red": {
+            "alias": "MIH",
+            "id": 5,
+            "name": "Михаил"
+          }
+        },
+        {
+          "status": 0,
+          "score": [],
+          "id": 89,
+          "yellow": {
+            "alias": "ASM",
+            "id": 6,
+            "name": "Александр С"
+          },
+          "red": {
+            "alias": "ABS",
+            "id": 1,
+            "name": "Александр Б"
+          }
+        }
+      ],
+      "active": false,
+      "name": 23
+    },
+    {
+      "matches": [
+        {
+          "status": 0,
+          "score": [],
+          "id": 96,
+          "yellow": {
+            "alias": "DEN",
+            "id": 7,
+            "name": "Денис"
+          },
+          "red": {
+            "alias": "APN",
+            "id": 4,
+            "name": "Алексей П"
+          }
+        },
+        {
+          "status": 0,
+          "score": [],
+          "id": 95,
+          "yellow": {
+            "alias": "ART",
+            "id": 2,
+            "name": "Артем"
+          },
+          "red": {
+            "alias": "IGR",
+            "id": 3,
+            "name": "Игорь"
+          }
+        },
+        {
+          "status": 0,
+          "score": [],
+          "id": 94,
+          "yellow": {
+            "alias": "MIH",
+            "id": 5,
+            "name": "Михаил"
+          },
+          "red": {
+            "alias": "ASM",
+            "id": 6,
+            "name": "Александр С"
+          }
+        },
+        {
+          "status": 0,
+          "score": [],
+          "id": 93,
+          "yellow": {
+            "alias": "EVG",
+            "id": 8,
+            "name": "Евгений"
+          },
+          "red": {
+            "alias": "ABS",
+            "id": 1,
+            "name": "Александр Б"
+          }
+        }
+      ],
+      "active": false,
+      "name": 24
+    },
+    {
+      "matches": [
+        {
+          "status": 0,
+          "score": [],
+          "id": 100,
+          "yellow": {
+            "alias": "APN",
+            "id": 4,
+            "name": "Алексей П"
+          },
+          "red": {
+            "alias": "MIH",
+            "id": 5,
+            "name": "Михаил"
+          }
+        },
+        {
+          "status": 0,
+          "score": [],
+          "id": 99,
+          "yellow": {
+            "alias": "ASM",
+            "id": 6,
+            "name": "Александр С"
+          },
+          "red": {
+            "alias": "EVG",
+            "id": 8,
+            "name": "Евгений"
+          }
+        },
+        {
+          "status": 0,
+          "score": [],
+          "id": 98,
+          "yellow": {
+            "alias": "ABS",
+            "id": 1,
+            "name": "Александр Б"
+          },
+          "red": {
+            "alias": "IGR",
+            "id": 3,
+            "name": "Игорь"
+          }
+        },
+        {
+          "status": 0,
+          "score": [],
+          "id": 97,
+          "yellow": {
+            "alias": "ART",
+            "id": 2,
+            "name": "Артем"
+          },
+          "red": {
+            "alias": "DEN",
+            "id": 7,
+            "name": "Денис"
+          }
+        }
+      ],
+      "active": false,
+      "name": 25
+    },
+    {
+      "matches": [
+        {
+          "status": 0,
+          "score": [],
+          "id": 104,
+          "yellow": {
+            "alias": "APN",
+            "id": 4,
+            "name": "Алексей П"
+          },
+          "red": {
+            "alias": "ART",
+            "id": 2,
+            "name": "Артем"
+          }
+        },
+        {
+          "status": 0,
+          "score": [],
+          "id": 103,
+          "yellow": {
+            "alias": "ABS",
+            "id": 1,
+            "name": "Александр Б"
+          },
+          "red": {
+            "alias": "MIH",
+            "id": 5,
+            "name": "Михаил"
+          }
+        },
+        {
+          "status": 0,
+          "score": [],
+          "id": 102,
+          "yellow": {
+            "alias": "IGR",
+            "id": 3,
+            "name": "Игорь"
+          },
+          "red": {
+            "alias": "EVG",
+            "id": 8,
+            "name": "Евгений"
+          }
+        },
+        {
+          "status": 0,
+          "score": [],
+          "id": 101,
+          "yellow": {
+            "alias": "ASM",
+            "id": 6,
+            "name": "Александр С"
+          },
+          "red": {
+            "alias": "DEN",
+            "id": 7,
+            "name": "Денис"
+          }
+        }
+      ],
+      "active": false,
+      "name": 26
+    },
+    {
+      "matches": [
+        {
+          "status": 0,
+          "score": [],
+          "id": 108,
+          "yellow": {
+            "alias": "ART",
+            "id": 2,
+            "name": "Артем"
+          },
+          "red": {
+            "alias": "ASM",
+            "id": 6,
+            "name": "Александр С"
+          }
+        },
+        {
+          "status": 0,
+          "score": [],
+          "id": 107,
+          "yellow": {
+            "alias": "IGR",
+            "id": 3,
+            "name": "Игорь"
+          },
+          "red": {
+            "alias": "DEN",
+            "id": 7,
+            "name": "Денис"
+          }
+        },
+        {
+          "status": 0,
+          "score": [],
+          "id": 106,
+          "yellow": {
+            "alias": "EVG",
+            "id": 8,
+            "name": "Евгений"
+          },
+          "red": {
+            "alias": "MIH",
+            "id": 5,
+            "name": "Михаил"
+          }
+        },
+        {
+          "status": 0,
+          "score": [],
+          "id": 105,
+          "yellow": {
+            "alias": "ABS",
+            "id": 1,
+            "name": "Александр Б"
+          },
+          "red": {
+            "alias": "APN",
+            "id": 4,
+            "name": "Алексей П"
+          }
+        }
+      ],
+      "active": false,
+      "name": 27
+    },
+    {
+      "matches": [
+        {
+          "status": 0,
+          "score": [],
+          "id": 112,
+          "yellow": {
+            "alias": "IGR",
+            "id": 3,
+            "name": "Игорь"
+          },
+          "red": {
+            "alias": "ASM",
+            "id": 6,
+            "name": "Александр С"
+          }
+        },
+        {
+          "status": 0,
+          "score": [],
+          "id": 111,
+          "yellow": {
+            "alias": "ABS",
+            "id": 1,
+            "name": "Александр Б"
+          },
+          "red": {
+            "alias": "ART",
+            "id": 2,
+            "name": "Артем"
+          }
+        },
+        {
+          "status": 0,
+          "score": [],
+          "id": 110,
+          "yellow": {
+            "alias": "EVG",
+            "id": 8,
+            "name": "Евгений"
+          },
+          "red": {
+            "alias": "APN",
+            "id": 4,
+            "name": "Алексей П"
+          }
+        },
+        {
+          "status": 0,
+          "score": [],
+          "id": 109,
+          "yellow": {
+            "alias": "MIH",
+            "id": 5,
+            "name": "Михаил"
+          },
+          "red": {
+            "alias": "DEN",
+            "id": 7,
+            "name": "Денис"
+          }
+        }
+      ],
+      "active": false,
+      "name": 28
+    }
+  ]
+}

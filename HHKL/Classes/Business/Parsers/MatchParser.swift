@@ -10,20 +10,21 @@ import CocoaLumberjackSwift
 
 
 //TODO write tests for check
+
 protocol ParserProtocol {
     typealias model
 
-    func parseModel(requestResult: Observable<JSON>) -> Observable<model>
+    func parseModel(requestResult: JSON) -> Observable<model>
 
-    func parseModelArray(requestResult: Observable<JSON>) -> Observable<[model]>
+    func parseModelArray(requestResult: JSON) -> Observable<[model]>
 }
 
 extension ParserProtocol {
-    func parseModelArray(requestResult: Observable<JSON>) -> Observable<[model]> {
-        return requestResult.flatMap {
+    func parseModelArray(requestResult: JSON) -> Observable<[model]> {
+        return Observable.just(requestResult).flatMap {
             json in
             return json.arrayValue.map {
-                return self.parseModel(Observable.just($0))
+                return self.parseModel($0)
             }.concat()
             .reduce([model](), accumulator: {
                 return $0 + [$1]
@@ -36,10 +37,10 @@ class DayParser: ParserProtocol {
 
     private let matchParser = MatchParser()
 
-    func parseModel(requestResult: Observable<JSON>) -> Observable<Day> {
-        return requestResult.flatMap {
+    func parseModel(requestResult: JSON) -> Observable<Day> {
+        return Observable.just(requestResult).flatMap {
             json in
-            return Observable.zip(Observable.just(json), self.matchParser.parseModelArray(Observable.just(json["matches"]))) {
+            return Observable.zip(Observable.just(json), self.matchParser.parseModelArray(json["matches"])) {
                 return ($0, $1)
             }
         }.flatMap {
@@ -68,12 +69,12 @@ class MatchParser: ParserProtocol {
 
     let matchGamesParser = MatchGamerParser()
 
-    func parseModel(requestResult: Observable<JSON>) -> Observable<Match> {
+    func parseModel(requestResult: JSON) -> Observable<Match> {
 
-        return requestResult.flatMap {
+        return Observable.just(requestResult).flatMap {
             json in
 
-            return Observable.zip(self.matchGamesParser.parseModel(Observable.just(json["yellow"])), self.matchGamesParser.parseModel(Observable.just(json["red"]))) {
+            return Observable.zip(self.matchGamesParser.parseModel(json["yellow"]), self.matchGamesParser.parseModel(json["red"])) {
                 return ($0, $1, json)
             }
 
@@ -111,8 +112,8 @@ class MatchParser: ParserProtocol {
 
 class MatchGamerParser: ParserProtocol {
 
-    func parseModel(requestResult: Observable<JSON>) -> Observable<MatchGamer> {
-        return requestResult.flatMap {
+    func parseModel(requestResult: JSON) -> Observable<MatchGamer> {
+        return Observable.just(requestResult).flatMap {
             json in
             return Observable.create {
                 observer in

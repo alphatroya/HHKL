@@ -7,6 +7,7 @@ import Foundation
 import RxSwift
 import SwiftyJSON
 import CocoaLumberjackSwift
+import RxMoya
 
 protocol MatchesViewModelProtocol: ViewModelProtocol {
     func numberOfCellsInSection(section: Int) -> Int
@@ -24,9 +25,10 @@ protocol MatchesViewModelProtocol: ViewModelProtocol {
 
 class MatchesViewModel: MatchesViewModelProtocol {
     var flowController: FlowControllerProtocol
-    var requestManager: RequestManagerProtocol?
     var dayParser: DayParser?
     var dataSource: [Day]?
+    var disposeBag: DisposeBag = DisposeBag()
+    var provider: RxMoyaProvider<MatchesNetworkTarget>?
 
     required init(flowController: FlowControllerProtocol) {
         self.flowController = flowController
@@ -34,19 +36,23 @@ class MatchesViewModel: MatchesViewModelProtocol {
 
     func reloadMatches(league: Int) -> Observable<[Day]> {
         guard let
-        requestManager = self.requestManager,
+        provider = self.provider,
         dayParser = self.dayParser else {
             return Observable.error(Error.ClassWrongConfigured)
         }
 
-        let requestDataObservable = requestManager.makeRequestWithType(.GET, path: .Matches(league), parameters: nil).map {
+        return provider.request(.Days(league))
+        .mapJSON()
+        .map {
             return JSON($0)["days"]
-        }
-        return dayParser.parseModelArray(requestDataObservable).map {
+        }.flatMap {
+            return dayParser.parseModelArray($0)
+        }.map {
             self.dataSource = $0
             return $0
         }
     }
+
 
 
     func titleForHeaderInSection(section: Int) -> String {
@@ -98,7 +104,7 @@ class MatchesViewModel: MatchesViewModelProtocol {
             if case .Error(_) = $0 {
                 DDLogWarn("error while performing transition")
             }
-        }
+        }.addDisposableTo(disposeBag)
     }
 
 }
