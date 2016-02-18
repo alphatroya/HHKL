@@ -34,7 +34,6 @@
 		B8DCAFFF98951F7FE28820F4 /* NavigationControllerFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DCAF0531F177686A0245B7 /* NavigationControllerFlowController.swift */; };
 		D40C4F571C58EDD000C616AF /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D40C4F531C58EDD000C616AF /* RxCocoa.framework */; };
 		D40C4F581C58EDD000C616AF /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D40C4F541C58EDD000C616AF /* RxSwift.framework */; };
-		D40F57741C58DB1C00348DB9 /* HHKLTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40F57731C58DB1C00348DB9 /* HHKLTests.swift */; };
 		D40F577F1C58DB1C00348DB9 /* HHKLUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40F577E1C58DB1C00348DB9 /* HHKLUITests.swift */; };
 		D40F57901C58DFC200348DB9 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D40F578C1C58DFC200348DB9 /* Alamofire.framework */; };
 		D40F57911C58DFC200348DB9 /* ATRLogFormatter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D40F578D1C58DFC200348DB9 /* ATRLogFormatter.framework */; };
@@ -49,6 +48,9 @@
 		D455DA301C59FB1500C3B48B /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D455DA2F1C59FB1500C3B48B /* SwiftyJSON.framework */; };
 		D46C64461C74784100978453 /* RxMoya.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D46C64451C74784100978453 /* RxMoya.framework */; };
 		D46C64481C74787B00978453 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D46C64471C74787B00978453 /* Result.framework */; };
+		D48546571C75E1C00072BC78 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D48546551C75E1C00072BC78 /* Nimble.framework */; };
+		D48546581C75E1C00072BC78 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D48546561C75E1C00072BC78 /* Quick.framework */; };
+		D48546591C75E8A10072BC78 /* MatchParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DCA15E4C49559EB0B230E4 /* MatchParserTests.swift */; };
 		D4CC1D5D1C5F58E800C1DB16 /* Localize_Swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4CC1D5C1C5F58E800C1DB16 /* Localize_Swift.framework */; };
 /* End PBXBuildFile section */
 
@@ -75,6 +77,7 @@
 		58603642D6BBC4C37AFBD41D /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		58603F265CC167CE8ED04342 /* MatchesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchesViewController.swift; sourceTree = "<group>"; };
 		84446B2B1C58F7CE00E6B171 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B8DCA15E4C49559EB0B230E4 /* MatchParserTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchParserTests.swift; sourceTree = "<group>"; };
 		B8DCA15EAD0D3061D4B7EC9D /* ParentTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParentTableViewCell.swift; sourceTree = "<group>"; };
 		B8DCA18DF9BB427F720D821E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B8DCA1F3A62B7CCE2239FF4C /* MatchViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchViewModel.swift; sourceTree = "<group>"; };
@@ -100,7 +103,6 @@
 		D40C4F541C58EDD000C616AF /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
 		D40F575B1C58DB1C00348DB9 /* HHKL.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HHKL.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D40F576F1C58DB1C00348DB9 /* HHKLTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HHKLTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		D40F57731C58DB1C00348DB9 /* HHKLTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HHKLTests.swift; sourceTree = "<group>"; };
 		D40F57751C58DB1C00348DB9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D40F577A1C58DB1C00348DB9 /* HHKLUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HHKLUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D40F577E1C58DB1C00348DB9 /* HHKLUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HHKLUITests.swift; sourceTree = "<group>"; };
@@ -118,6 +120,8 @@
 		D455DA2F1C59FB1500C3B48B /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
 		D46C64451C74784100978453 /* RxMoya.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxMoya.framework; path = Carthage/Build/iOS/RxMoya.framework; sourceTree = "<group>"; };
 		D46C64471C74787B00978453 /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
+		D48546551C75E1C00072BC78 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
+		D48546561C75E1C00072BC78 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
 		D4CC1D5C1C5F58E800C1DB16 /* Localize_Swift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Localize_Swift.framework; path = Carthage/Build/iOS/Localize_Swift.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -148,6 +152,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D48546581C75E1C00072BC78 /* Quick.framework in Frameworks */,
+				D48546571C75E1C00072BC78 /* Nimble.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -244,6 +250,14 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		B8DCA5F4A185DD88008C4BA1 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				B8DCAE20B66F954E860C9DCA /* Business */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
 		B8DCA74229D961AAB482A78A /* Factories */ = {
 			isa = PBXGroup;
 			children = (
@@ -293,6 +307,22 @@
 				B8DCAB0EC6963CA6EFAE574C /* MatchesNetworkTarget.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		B8DCAD751C3ACEB3CA97AAE7 /* Parsers */ = {
+			isa = PBXGroup;
+			children = (
+				B8DCA15E4C49559EB0B230E4 /* MatchParserTests.swift */,
+			);
+			path = Parsers;
+			sourceTree = "<group>";
+		};
+		B8DCAE20B66F954E860C9DCA /* Business */ = {
+			isa = PBXGroup;
+			children = (
+				B8DCAD751C3ACEB3CA97AAE7 /* Parsers */,
+			);
+			path = Business;
 			sourceTree = "<group>";
 		};
 		B8DCAE4153B42B9D2FF10A1C /* Classes */ = {
@@ -347,8 +377,8 @@
 		D40F57721C58DB1C00348DB9 /* HHKLTests */ = {
 			isa = PBXGroup;
 			children = (
-				D40F57731C58DB1C00348DB9 /* HHKLTests.swift */,
 				D40F57751C58DB1C00348DB9 /* Info.plist */,
+				B8DCA5F4A185DD88008C4BA1 /* Classes */,
 			);
 			path = HHKLTests;
 			sourceTree = "<group>";
@@ -365,6 +395,8 @@
 		D41EC1F41C5F3DC6008FE405 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D48546551C75E1C00072BC78 /* Nimble.framework */,
+				D48546561C75E1C00072BC78 /* Quick.framework */,
 				D46C64471C74787B00978453 /* Result.framework */,
 				D46C64451C74784100978453 /* RxMoya.framework */,
 				D4CC1D5C1C5F58E800C1DB16 /* Localize_Swift.framework */,
@@ -413,6 +445,7 @@
 				D40F576B1C58DB1C00348DB9 /* Sources */,
 				D40F576C1C58DB1C00348DB9 /* Frameworks */,
 				D40F576D1C58DB1C00348DB9 /* Resources */,
+				D485465A1C75E9830072BC78 /* Carthage */,
 			);
 			buildRules = (
 			);
@@ -543,6 +576,22 @@
 			shellPath = /bin/sh;
 			shellScript = "/usr/local/bin/carthage copy-frameworks";
 		};
+		D485465A1C75E9830072BC78 /* Carthage */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Quick.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Nimble.framework",
+			);
+			name = Carthage;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
 		D4FE75A11C58E61D001B697C /* Calculate number of build and version  */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 8;
@@ -593,7 +642,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D40F57741C58DB1C00348DB9 /* HHKLTests.swift in Sources */,
+				D48546591C75E8A10072BC78 /* MatchParserTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -751,6 +800,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = HHKLTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ru.handh.HHKLTests;
@@ -763,6 +816,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = HHKLTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ru.handh.HHKLTests;
