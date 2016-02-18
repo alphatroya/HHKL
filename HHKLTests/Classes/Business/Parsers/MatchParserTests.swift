@@ -10,42 +10,65 @@ import RxSwift
 import SwiftyJSON
 @testable import HHKL
 
-class DayParserSpec: QuickSpec {
+class MatchParserSpec: QuickSpec {
     override func spec() {
-
-        var parser: DayParser!
+        var parser: MatchParser!
         let requestManager = RxMoyaProvider<MatchesNetworkTarget>(stubClosure: MoyaProvider.ImmediatelyStub)
 
         beforeEach {
-            parser = DayParser()
+            parser = MatchParser()
         }
         afterEach {
             parser = nil
         }
         describe("with success request result") {
-            var result: [Day]?
-            beforeEach {
-                requestManager.request(.Days(0)).mapJSON()
-                .map {
-                    return JSON($0)["days"]
-                }.flatMap {
-                    return parser.parseModelArray($0)
-                }.subscribeNext {
-                    result = $0
+            context("array result") {
+                var result: [Match]?
+                beforeEach {
+                    requestManager.request(.Days(0)).mapJSON()
+                    .map {
+                        return JSON($0)["days"][0]["matches"]
+                    }.flatMap {
+                        return parser.parseModelArray($0)
+                    }.subscribeNext {
+                        result = $0
+                    }
+                }
+                it("should parse correct count of days") {
+                    expect(result!.count).toEventually(equal(4))
+                }
+                it("should parse correct first object") {
+                    let firstMatch = result![0]
+                    expect(firstMatch.status.rawValue).toEventually(equal(3))
+                    expect(firstMatch.score!.count).toEventually(equal(2))
+                    expect(firstMatch.score!.first!.yellow).toEventually(equal(7))
+                    expect(firstMatch.score!.first!.red).toEventually(equal(10))
+                    expect(firstMatch.id).toEventually(equal(3))
                 }
             }
-            it("should parse correct count of days") {
-                expect(result!.count).toEventually(equal(28))
+            context("single result") {
+                var result: Match?
+                beforeEach {
+                    requestManager.request(.Days(0)).mapJSON()
+                    .map {
+                        return JSON($0)["days"][0]["matches"][0]
+                    }.flatMap {
+                        return parser.parseModel($0)
+                    }.subscribeNext {
+                        result = $0
+                    }
+                }
+                it("should parse correct first object") {
+                    expect(result!.status.rawValue).toEventually(equal(3))
+                    expect(result!.score!.count).toEventually(equal(2))
+                    expect(result!.score!.first!.yellow).toEventually(equal(7))
+                    expect(result!.score!.first!.red).toEventually(equal(10))
+                    expect(result!.id).toEventually(equal(3))
+                }
             }
-            it("should parse correct first object") {
-                let firstDay = result![0]
-                expect(firstDay.matches!.count).toEventually(equal(4))
-                expect(firstDay.active).toEventually(beTrue())
-                expect(firstDay.name).toEventually(equal(1))
-            }
+
         }
         describe("with wrong request result") {
-            var result: [Day]?
             var errorObservable: Observable<JSON>?
             beforeEach {
                 errorObservable = Observable.just("{\"hello\": \"world\"}").map {
@@ -53,11 +76,12 @@ class DayParserSpec: QuickSpec {
                 }
             }
             afterEach {
-                result = nil
                 errorObservable = nil
             }
             it("should return error after parse") {
                 var error: ErrorType?
+                var result: [Match]?
+                var isParserError: Bool?
                 errorObservable!.flatMap {
                     return parser.parseModelArray($0)
                 }.subscribe {
@@ -66,14 +90,17 @@ class DayParserSpec: QuickSpec {
                         result = e
                     case .Error(let err):
                         error = err
+                        if let appError = err as? HHKL.Error {
+                            isParserError = (appError == HHKL.Error.ParserError)
+                        }
                     default:
                         return
                     }
                 }
                 expect(error).toEventuallyNot(beNil())
+                expect(isParserError!).toEventually(beTrue())
                 expect(result).toEventually(beNil())
             }
         }
     }
-
 }
