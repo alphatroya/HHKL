@@ -18,8 +18,9 @@ protocol MatchResultViewProtocol {
 extension MatchResultViewProtocol {
     func createPlayerSection() -> (stackView:UIStackView, label:UILabel, imageView:UIImageView) {
         let stackView = UIStackView()
-        stackView.distribution = .FillProportionally
+        stackView.distribution = .EqualSpacing
         stackView.axis = .Vertical
+        stackView.spacing = 5.0
 
         let view = UIView()
 
@@ -44,7 +45,7 @@ extension MatchResultViewProtocol {
     func createScoreLabel() -> UILabel {
         let scoreLabel = UILabel()
         scoreLabel.textAlignment = .Center
-        scoreLabel.font = UIFont.systemFontOfSize(25)
+        scoreLabel.font = UIFont.systemFontOfSize(30)
         return scoreLabel
     }
 }

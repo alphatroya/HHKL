@@ -7,7 +7,7 @@ import UIKit
 import Localize_Swift
 import SnapKit
 
-class MatchViewController: ParentViewController, MatchResultViewProtocol {
+class MatchViewController: ParentViewController {
 
     let viewModel: MatchViewModelProtocol
 
@@ -20,110 +20,96 @@ class MatchViewController: ParentViewController, MatchResultViewProtocol {
         fatalError("NSCoding not supported")
     }
 
-    var yellowGamerNameLabel: UILabel?
-    var redGamerNameLabel: UILabel?
-    var scoreLabel: UILabel?
-    var firstMatchLabel: UILabel?
-    var secondMatchLabel: UILabel?
-    var thirdMatchLabel: UILabel?
-
-    let scrollView = UIScrollView()
-    let stackView = UIStackView()
+    let tableView = UITableView()
+    let matchHeaderView = MatchHeaderView()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "match-view-controller-title".localized()
         view.backgroundColor = UIColor.whiteColor()
 
-        view.addSubview(scrollView)
-        scrollView.snp_makeConstraints {
+        view.addSubview(tableView)
+        tableView.snp_makeConstraints {
             $0.edges.equalTo(0)
         }
 
-        stackView.axis = .Vertical
-        stackView.layoutMarginsRelativeArrangement = true
-        stackView.layoutMargins = UIEdgeInsetsMake(7.0, 7.0, 7.0, 7.0)
-        view.addSubview(stackView)
-        stackView.snp_makeConstraints {
-            $0.right.equalTo(0)
-            $0.top.equalTo(0)
-            $0.left.equalTo(0)
+        tableView.dataSource = self
+        tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: String(UITableViewCell))
+        tableView.separatorStyle = .None
+        tableView.tableHeaderView = matchHeaderView
+        matchHeaderView.snp_makeConstraints {
+            make in
+            make.width.equalTo(tableView)
+            make.height.equalTo(120)
         }
-
-        stackView.addArrangedSubview(createMatchResultSection())
-
-        var label = createMatchDetailedResultSection()
-        firstMatchLabel = label
-        stackView.addArrangedSubview(label)
-
-        label = createMatchDetailedResultSection()
-        secondMatchLabel = label
-        stackView.addArrangedSubview(label)
-
-        label = createMatchDetailedResultSection()
-        thirdMatchLabel = label
-        stackView.addArrangedSubview(label)
+        matchHeaderView.setNeedsLayout()
+        matchHeaderView.layoutIfNeeded()
+        tableView.tableHeaderView = matchHeaderView
+        tableView.tableFooterView = UIView()
     }
 
+    private var matchesStringResultArray = [String]()
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         guard let match = viewModel.match else {
             return
         }
-        yellowGamerNameLabel?.text = match.yellow.name
-        redGamerNameLabel?.text = match.red.name
+        matchHeaderView.yellowNameLabel.text = match.yellow.name
+        matchHeaderView.redNameLabel.text = match.red.name
 
+        matchesStringResultArray = [String]()
         if let scoreArray = match.score where !scoreArray.isEmpty {
             let resultMatch = scoreArray.getResultOfMatch()
-            scoreLabel?.text = "\(resultMatch.yellow) : \(resultMatch.red)"
+            matchHeaderView.scoreLabel.text = "\(resultMatch.yellow) : \(resultMatch.red)"
 
             var resultGame = scoreArray[0]
-            firstMatchLabel?.text = "\(resultGame.yellow) : \(resultGame.red)"
+            matchesStringResultArray += ["\(resultGame.yellow) : \(resultGame.red)"]
             if scoreArray.count > 1 {
                 resultGame = scoreArray[1]
-                secondMatchLabel?.text = "\(resultGame.yellow) : \(resultGame.red)"
+                matchesStringResultArray += ["\(resultGame.yellow) : \(resultGame.red)"]
                 if scoreArray.count > 2 {
                     resultGame = scoreArray[2]
-                    thirdMatchLabel?.text = "\(resultGame.yellow) : \(resultGame.red)"
+                    matchesStringResultArray += ["\(resultGame.yellow) : \(resultGame.red)"]
                 }
             }
-
         } else {
-            scoreLabel?.text = "match-view-controller-vernus".localized()
+            matchHeaderView.scoreLabel.text = "match-view-controller-vernus".localized()
+        }
+        tableView.reloadData()
+    }
+}
+
+extension MatchViewController: UITableViewDataSource {
+
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return self.matchesStringResultArray.count
+    }
+
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
+    }
+
+    func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        switch section {
+        case 0:
+            return "match-view-controller-first-section-title".localized()
+        case 1:
+            return "match-view-controller-second-section-title".localized()
+        case 2:
+            return "match-view-controller-third-section-title".localized()
+        default:
+            return nil
         }
     }
 
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        scrollView.contentSize = CGSize(width: stackView.frame.width, height: stackView.frame.height)
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier(String(UITableViewCell), forIndexPath: indexPath)
+        cell.selectionStyle = .None
+        cell.textLabel?.text = self.matchesStringResultArray[indexPath.section]
+        cell.textLabel?.font = UIFont.systemFontOfSize(18)
+        cell.textLabel?.textAlignment = .Center
+        return cell
     }
 
-    private func createMatchResultSection() -> UIView {
-        let matchResultStackView = UIStackView()
-        matchResultStackView.distribution = .FillEqually
-
-        var stack = createPlayerSection()
-        stack.imageView.backgroundColor = UIColor.hhkl_yellowFlatColor()
-        self.yellowGamerNameLabel = stack.label
-        matchResultStackView.addArrangedSubview(stack.stackView)
-
-        let scoreLabel = createScoreLabel()
-        matchResultStackView.addArrangedSubview(scoreLabel)
-        self.scoreLabel = scoreLabel
-
-        stack = createPlayerSection()
-        stack.imageView.backgroundColor = UIColor.hhkl_redFlatColor()
-        self.redGamerNameLabel = stack.label
-        matchResultStackView.addArrangedSubview(stack.stackView)
-        return matchResultStackView
-    }
-
-    private func createMatchDetailedResultSection() -> UILabel {
-        let label = UILabel()
-        label.font = UIFont.systemFontOfSize(15)
-        label.textColor = UIColor.grayColor()
-        label.textAlignment = .Center
-        return label
-    }
 
 }
