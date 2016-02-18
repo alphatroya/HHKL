@@ -54,6 +54,7 @@ class MatchesViewModel: MatchesViewModelProtocol {
     }
 
 
+
     func titleForHeaderInSection(section: Int) -> String {
         guard let dataSource = self.dataSource else {
             return ""
