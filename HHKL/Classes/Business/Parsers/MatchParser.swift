@@ -9,8 +9,6 @@ import SwiftyJSON
 import CocoaLumberjackSwift
 
 
-//TODO write tests for check
-
 protocol ParserProtocol {
     typealias model
 
