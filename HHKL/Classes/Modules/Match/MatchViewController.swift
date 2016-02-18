@@ -34,7 +34,7 @@ class MatchViewController: ParentViewController {
         }
 
         tableView.dataSource = self
-        tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: String(UITableViewCell))
+        tableView.registerClass(MatchSectionResultViewCell.self, forCellReuseIdentifier: String(MatchSectionResultViewCell))
         tableView.separatorStyle = .None
         tableView.tableHeaderView = matchHeaderView
         matchHeaderView.snp_makeConstraints {
@@ -103,13 +103,9 @@ extension MatchViewController: UITableViewDataSource {
     }
 
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier(String(UITableViewCell), forIndexPath: indexPath)
-        cell.selectionStyle = .None
+        let cell = tableView.dequeueReusableCellWithIdentifier(String(MatchSectionResultViewCell), forIndexPath: indexPath)
         cell.textLabel?.text = self.matchesStringResultArray[indexPath.section]
-        cell.textLabel?.font = UIFont.systemFontOfSize(18)
-        cell.textLabel?.textAlignment = .Center
         return cell
     }
-
 
 }
