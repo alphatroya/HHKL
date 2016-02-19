@@ -1,5 +1,5 @@
 github "almas-dev/APMAlertController" "0.2.2"
-github "alphatroya/ATRSlideSelectorView" "1.0"
+github "alphatroya/ATRSlideSelectorView" "1.1"
 github "Alamofire/Alamofire" "3.2.0"
 github "ViccAlexander/Chameleon" "2.1.0"
 github "CocoaLumberjack/CocoaLumberjack" "2.2.0"

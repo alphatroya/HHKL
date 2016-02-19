@@ -25,7 +25,7 @@ class MatchSectionResultViewCell: ParentTableViewCell {
         sliderView.clipsToBounds = true
         sliderView.layer.cornerRadius = 5.0
         sliderView.rightViewBackgroundColor = UIColor.hhkl_redFlatColor()
-        sliderView.step = 19
+        sliderView.stepCount = 19
         contentView.addSubview(sliderView)
         sliderView.snp_makeConstraints {
             make in
@@ -50,6 +50,24 @@ class MatchSectionResultViewCell: ParentTableViewCell {
             make.centerY.equalTo(sliderView)
             make.right.equalTo(-5)
             make.left.equalTo(sliderView.snp_right).offset(5)
+        }
+
+        sliderView.valueChangedClosure = {
+            [weak self]multiplier in
+            guard let strongSelf = self else {
+                return
+            }
+            if multiplier > 0.5 {
+                strongSelf.yellowCountLabel.text = "10"
+            } else {
+                strongSelf.yellowCountLabel.text = "\(Int(round(CGFloat(strongSelf.sliderView.stepCount!) * multiplier)))"
+            }
+            if multiplier < 0.5 {
+                strongSelf.redCountLabel.text = "10"
+            } else {
+                let sliderValue = CGFloat(strongSelf.sliderView.stepCount!)
+                strongSelf.redCountLabel.text = "\(Int(round(sliderValue - CGFloat(sliderValue) * multiplier)))"
+            }
         }
     }
 

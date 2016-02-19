@@ -8,4 +8,4 @@ github "alphatroya/NetworkActivityIndicatorManager" ~> 1.0
 github "dzenbot/DZNEmptyDataSet" ~> 1.7.3
 github "marmelroy/Localize-Swift" ~> 1.1
 github "Moya/Moya" ~> 6.1.3
-github "alphatroya/ATRSlideSelectorView" ~> 1.0
+github "alphatroya/ATRSlideSelectorView" ~> 1.1

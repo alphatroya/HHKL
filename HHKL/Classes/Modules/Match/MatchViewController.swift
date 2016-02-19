@@ -50,7 +50,7 @@ class MatchViewController: ParentViewController {
         tableView.tableFooterView = UIView()
     }
 
-    private var matchesStringResultArray = [String]()
+    private var matchesResultArray = [(Int, Int)]()
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         guard let match = viewModel.match else {
@@ -59,19 +59,19 @@ class MatchViewController: ParentViewController {
         matchHeaderView.yellowNameLabel.text = match.yellow.name
         matchHeaderView.redNameLabel.text = match.red.name
 
-        matchesStringResultArray = [String]()
+        matchesResultArray = [(Int, Int)]()
         if let scoreArray = match.score where !scoreArray.isEmpty {
             let resultMatch = scoreArray.getResultOfMatch()
             matchHeaderView.scoreLabel.text = "\(resultMatch.yellow) : \(resultMatch.red)"
 
             var resultGame = scoreArray[0]
-            matchesStringResultArray += ["\(resultGame.yellow) : \(resultGame.red)"]
+            matchesResultArray += [(resultGame.yellow, resultGame.red)]
             if scoreArray.count > 1 {
                 resultGame = scoreArray[1]
-                matchesStringResultArray += ["\(resultGame.yellow) : \(resultGame.red)"]
+                matchesResultArray += [(resultGame.yellow, resultGame.red)]
                 if scoreArray.count > 2 {
                     resultGame = scoreArray[2]
-                    matchesStringResultArray += ["\(resultGame.yellow) : \(resultGame.red)"]
+                    matchesResultArray += [(resultGame.yellow, resultGame.red)]
                 }
             }
         } else {
@@ -84,7 +84,7 @@ class MatchViewController: ParentViewController {
 extension MatchViewController: UITableViewDataSource {
 
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return self.matchesStringResultArray.count
+        return self.matchesResultArray.count
     }
 
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -106,27 +106,13 @@ extension MatchViewController: UITableViewDataSource {
 
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier(String(MatchSectionResultViewCell), forIndexPath: indexPath) as! MatchSectionResultViewCell
-//        cell.textLabel?.text = self.matchesStringResultArray[indexPath.section]
-        cell.sliderView.delegate = self
-        cell.yellowCountLabel.text = "10"
-        cell.redCountLabel.text = "10"
+        let (yellow, red) = self.matchesResultArray[indexPath.section]
+        if yellow > red {
+            cell.sliderView.currentRatio = CGFloat(yellow + (9 - red)) / 19.0
+        } else {
+            cell.sliderView.currentRatio = CGFloat(yellow) / 19.0
+        }
         return cell
     }
 
-}
-
-extension MatchViewController: ATRSlideSelectorViewDelegate {
-    func valueChangedInSlider(slider: ATRSlideSelectorView, multiplier: CGFloat) {
-//        if multiplier > 0.5 {
-//            leftLabel.text = "10"
-//        } else {
-//            leftLabel.text = "\(Int(round(CGFloat(slider.step!) * multiplier)))"
-//        }
-//        if multiplier < 0.5 {
-//            rightLabel.text = "10"
-//        } else {
-//            let sliderValue = CGFloat(slider.step!)
-//            rightLabel.text = "\(Int(round(sliderValue - CGFloat(sliderValue) * multiplier)))"
-//        }
-    }
 }
