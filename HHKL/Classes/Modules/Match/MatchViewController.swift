@@ -6,6 +6,7 @@
 import UIKit
 import Localize_Swift
 import SnapKit
+import ATRSlideSelectorView
 
 class MatchViewController: ParentViewController {
 
@@ -36,6 +37,7 @@ class MatchViewController: ParentViewController {
         tableView.dataSource = self
         tableView.registerClass(MatchSectionResultViewCell.self, forCellReuseIdentifier: String(MatchSectionResultViewCell))
         tableView.separatorStyle = .None
+        tableView.rowHeight = 44
         tableView.tableHeaderView = matchHeaderView
         matchHeaderView.snp_makeConstraints {
             make in
@@ -103,9 +105,28 @@ extension MatchViewController: UITableViewDataSource {
     }
 
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier(String(MatchSectionResultViewCell), forIndexPath: indexPath)
-        cell.textLabel?.text = self.matchesStringResultArray[indexPath.section]
+        let cell = tableView.dequeueReusableCellWithIdentifier(String(MatchSectionResultViewCell), forIndexPath: indexPath) as! MatchSectionResultViewCell
+//        cell.textLabel?.text = self.matchesStringResultArray[indexPath.section]
+        cell.sliderView.delegate = self
+        cell.yellowCountLabel.text = "10"
+        cell.redCountLabel.text = "10"
         return cell
     }
 
+}
+
+extension MatchViewController: ATRSlideSelectorViewDelegate {
+    func valueChangedInSlider(slider: ATRSlideSelectorView, multiplier: CGFloat) {
+//        if multiplier > 0.5 {
+//            leftLabel.text = "10"
+//        } else {
+//            leftLabel.text = "\(Int(round(CGFloat(slider.step!) * multiplier)))"
+//        }
+//        if multiplier < 0.5 {
+//            rightLabel.text = "10"
+//        } else {
+//            let sliderValue = CGFloat(slider.step!)
+//            rightLabel.text = "\(Int(round(sliderValue - CGFloat(sliderValue) * multiplier)))"
+//        }
+    }
 }
