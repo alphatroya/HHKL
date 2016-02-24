@@ -53,7 +53,7 @@ SPEC CHECKSUMS:
   APMAlertController: ab22b3fb93cd9e6c53de605569e29687d9484355
   ATRLogFormatter: 85a593b37470728f48419011374eb5ff99b1138d
   ATRNetworkActivityIndicatorManager: 4ab7d73cdd4dcecda72abfe7396b01bd4ce70fd1
-  ATRSlideSelectorView: 7a46ce1eb3c7a602d67ddf7873a6b9db476d8134
+  ATRSlideSelectorView: adf025733a364fa2b9206143fa646297529e8946
   ChameleonFramework: d21a3cc247abfe5e37609a283a8238b03575cf64
   CocoaLumberjack: 17fe8581f84914d5d7e6360f7c70022b173c3ae0
   DZNEmptyDataSet: dd7cca17c1d07dfa78956859b1e70a52505678ef
