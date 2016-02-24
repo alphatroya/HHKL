@@ -1,0 +1,69 @@
+PODS:
+  - Alamofire (3.2.0)
+  - APMAlertController (0.2.2)
+  - ATRLogFormatter (1.2.1):
+    - CocoaLumberjack/Swift (= 2.2.0)
+  - ATRNetworkActivityIndicatorManager (1.0)
+  - ATRSlideSelectorView (1.1)
+  - ChameleonFramework (2.1.0):
+    - ChameleonFramework/Default (= 2.1.0)
+  - ChameleonFramework/Default (2.1.0)
+  - CocoaLumberjack/Core (2.2.0)
+  - CocoaLumberjack/Default (2.2.0):
+    - CocoaLumberjack/Core
+  - CocoaLumberjack/Extensions (2.2.0):
+    - CocoaLumberjack/Default
+  - CocoaLumberjack/Swift (2.2.0):
+    - CocoaLumberjack/Extensions
+  - DZNEmptyDataSet (1.7.3)
+  - Localize-Swift (1.1)
+  - Moya (6.1.3):
+    - Moya/Core (= 6.1.3)
+  - Moya/Core (6.1.3):
+    - Alamofire (~> 3.0)
+    - Result (~> 1.0)
+  - Moya/RxSwift (6.1.3):
+    - Moya/Core
+    - RxSwift (~> 2.0)
+  - Nimble (3.1.0)
+  - Quick (0.9.1)
+  - Result (1.0.2)
+  - RxSwift (2.2.0)
+  - SnapKit (0.19.1)
+  - SwiftyJSON (2.3.2)
+
+DEPENDENCIES:
+  - APMAlertController (~> 0.2.2)
+  - ATRLogFormatter (~> 1.2.1)
+  - ATRNetworkActivityIndicatorManager (~> 1.0)
+  - ATRSlideSelectorView (~> 1.1)
+  - ChameleonFramework (~> 2.1.0)
+  - DZNEmptyDataSet (~> 1.7.3)
+  - Localize-Swift (~> 1.1)
+  - Moya (~> 6.1.3)
+  - Moya/RxSwift (~> 6.1.3)
+  - Nimble (~> 3.1.0)
+  - Quick (~> 0.9.1)
+  - RxSwift (~> 2.0)
+  - SnapKit (~> 0.19.1)
+  - SwiftyJSON (~> 2.3.1)
+
+SPEC CHECKSUMS:
+  Alamofire: 4da478599fccddff361205c8929333d7fe18dceb
+  APMAlertController: ab22b3fb93cd9e6c53de605569e29687d9484355
+  ATRLogFormatter: 85a593b37470728f48419011374eb5ff99b1138d
+  ATRNetworkActivityIndicatorManager: 4ab7d73cdd4dcecda72abfe7396b01bd4ce70fd1
+  ATRSlideSelectorView: 7a46ce1eb3c7a602d67ddf7873a6b9db476d8134
+  ChameleonFramework: d21a3cc247abfe5e37609a283a8238b03575cf64
+  CocoaLumberjack: 17fe8581f84914d5d7e6360f7c70022b173c3ae0
+  DZNEmptyDataSet: dd7cca17c1d07dfa78956859b1e70a52505678ef
+  Localize-Swift: 72fab22c9c271a1041082fa3b53ca64e527ccf4a
+  Moya: 26b290a8d675c167ea6229ba08e07dce562265a5
+  Nimble: 79d40f4d69d47314229bbabacaa02b8838c779b9
+  Quick: a5221fc21788b6aeda934805e68b061839bc3165
+  Result: dd3dd71af3fa2e262f1a999e14fba2c25ec14f16
+  RxSwift: b8a749f2204c6c7a5c29b306a9c3bc11d5b87c5b
+  SnapKit: eff58d6e3451bf2f482db2eccf86aecf371dc62d
+  SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
+
+COCOAPODS: 0.39.0

@@ -5,7 +5,7 @@
 
 import UIKit
 import SnapKit
-import Chameleon
+import ChameleonFramework
 
 protocol MatchResultViewProtocol {
 

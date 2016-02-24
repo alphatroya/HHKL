@@ -4,7 +4,7 @@
 //
 
 import UIKit
-import Chameleon
+import ChameleonFramework
 
 extension UIColor {
 

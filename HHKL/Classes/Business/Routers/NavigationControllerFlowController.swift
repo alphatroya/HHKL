@@ -5,7 +5,7 @@
 
 import UIKit
 import RxSwift
-import Chameleon
+import ChameleonFramework
 
 class NavigationControllerFlowController: UINavigationController, FlowControllerProtocol {
 

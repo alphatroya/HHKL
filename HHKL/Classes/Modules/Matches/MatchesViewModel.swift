@@ -6,8 +6,8 @@
 import Foundation
 import RxSwift
 import SwiftyJSON
-import CocoaLumberjackSwift
-import RxMoya
+import CocoaLumberjack
+import Moya
 
 protocol MatchesViewModelProtocol: ViewModelProtocol {
     func numberOfCellsInSection(section: Int) -> Int
