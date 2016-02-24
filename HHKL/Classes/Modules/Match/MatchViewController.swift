@@ -6,6 +6,7 @@
 import UIKit
 import Localize_Swift
 import SnapKit
+import ATRSlideSelectorView
 
 class MatchViewController: ParentViewController {
 
@@ -36,6 +37,7 @@ class MatchViewController: ParentViewController {
         tableView.dataSource = self
         tableView.registerClass(MatchSectionResultViewCell.self, forCellReuseIdentifier: String(MatchSectionResultViewCell))
         tableView.separatorStyle = .None
+        tableView.rowHeight = 44
         tableView.tableHeaderView = matchHeaderView
         matchHeaderView.snp_makeConstraints {
             make in
@@ -48,7 +50,7 @@ class MatchViewController: ParentViewController {
         tableView.tableFooterView = UIView()
     }
 
-    private var matchesStringResultArray = [String]()
+    private var matchesResultArray = [(Int, Int)]()
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         guard let match = viewModel.match else {
@@ -57,19 +59,19 @@ class MatchViewController: ParentViewController {
         matchHeaderView.yellowNameLabel.text = match.yellow.name
         matchHeaderView.redNameLabel.text = match.red.name
 
-        matchesStringResultArray = [String]()
+        matchesResultArray = [(Int, Int)]()
         if let scoreArray = match.score where !scoreArray.isEmpty {
             let resultMatch = scoreArray.getResultOfMatch()
             matchHeaderView.scoreLabel.text = "\(resultMatch.yellow) : \(resultMatch.red)"
 
             var resultGame = scoreArray[0]
-            matchesStringResultArray += ["\(resultGame.yellow) : \(resultGame.red)"]
+            matchesResultArray += [(resultGame.yellow, resultGame.red)]
             if scoreArray.count > 1 {
                 resultGame = scoreArray[1]
-                matchesStringResultArray += ["\(resultGame.yellow) : \(resultGame.red)"]
+                matchesResultArray += [(resultGame.yellow, resultGame.red)]
                 if scoreArray.count > 2 {
                     resultGame = scoreArray[2]
-                    matchesStringResultArray += ["\(resultGame.yellow) : \(resultGame.red)"]
+                    matchesResultArray += [(resultGame.yellow, resultGame.red)]
                 }
             }
         } else {
@@ -82,7 +84,7 @@ class MatchViewController: ParentViewController {
 extension MatchViewController: UITableViewDataSource {
 
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return self.matchesStringResultArray.count
+        return self.matchesResultArray.count
     }
 
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -103,8 +105,13 @@ extension MatchViewController: UITableViewDataSource {
     }
 
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier(String(MatchSectionResultViewCell), forIndexPath: indexPath)
-        cell.textLabel?.text = self.matchesStringResultArray[indexPath.section]
+        let cell = tableView.dequeueReusableCellWithIdentifier(String(MatchSectionResultViewCell), forIndexPath: indexPath) as! MatchSectionResultViewCell
+        let (yellow, red) = self.matchesResultArray[indexPath.section]
+        if yellow > red {
+            cell.sliderView.currentRatio = CGFloat(yellow + (9 - red)) / 19.0
+        } else {
+            cell.sliderView.currentRatio = CGFloat(yellow) / 19.0
+        }
         return cell
     }
 

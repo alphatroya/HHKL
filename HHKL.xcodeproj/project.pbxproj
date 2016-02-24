@@ -14,8 +14,8 @@
 		84446B2C1C58F7CE00E6B171 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84446B2B1C58F7CE00E6B171 /* LaunchScreen.storyboard */; };
 		B8DCA00CE1A55EAEA43628F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B8DCA18DF9BB427F720D821E /* Assets.xcassets */; };
 		B8DCA088DC7E08140CC9871F /* Match.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DCAEC1B9C40A1012E331D0 /* Match.swift */; };
-		B8DCA15B1F941D2939F3854A /* MatchHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DCA039326AE690EC88562F /* MatchHeaderView.swift */; };
 		B8DCA0D4ACC3AD93F1849701 /* MatchGamerParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DCA6253306F39D9D75797F /* MatchGamerParserTests.swift */; };
+		B8DCA15B1F941D2939F3854A /* MatchHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DCA039326AE690EC88562F /* MatchHeaderView.swift */; };
 		B8DCA222E737BF6BA635509C /* MatchesNetworkTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DCAB0EC6963CA6EFAE574C /* MatchesNetworkTarget.swift */; };
 		B8DCA2F54B9EE3D2A161EF37 /* ParentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DCA15EAD0D3061D4B7EC9D /* ParentTableViewCell.swift */; };
 		B8DCA3F681C90A0A23A18F81 /* ViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DCAABF1C130FEB1F22405E /* ViewControllerFactory.swift */; };
@@ -55,6 +55,7 @@
 		D48546571C75E1C00072BC78 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D48546551C75E1C00072BC78 /* Nimble.framework */; };
 		D48546581C75E1C00072BC78 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D48546561C75E1C00072BC78 /* Quick.framework */; };
 		D48546591C75E8A10072BC78 /* DayParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DCA15E4C49559EB0B230E4 /* DayParserTests.swift */; };
+		D48546F01C7737370072BC78 /* ATRSlideSelectorView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D48546EF1C7737370072BC78 /* ATRSlideSelectorView.framework */; };
 		D4CC1D5D1C5F58E800C1DB16 /* Localize_Swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4CC1D5C1C5F58E800C1DB16 /* Localize_Swift.framework */; };
 /* End PBXBuildFile section */
 
@@ -130,6 +131,7 @@
 		D46C64471C74787B00978453 /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
 		D48546551C75E1C00072BC78 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
 		D48546561C75E1C00072BC78 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
+		D48546EF1C7737370072BC78 /* ATRSlideSelectorView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ATRSlideSelectorView.framework; path = Carthage/Build/iOS/ATRSlideSelectorView.framework; sourceTree = "<group>"; };
 		D4CC1D5C1C5F58E800C1DB16 /* Localize_Swift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Localize_Swift.framework; path = Carthage/Build/iOS/Localize_Swift.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -152,6 +154,7 @@
 				D41EC1F31C5B5472008FE405 /* SnapKit.framework in Frameworks */,
 				D46C64481C74787B00978453 /* Result.framework in Frameworks */,
 				D46C64461C74784100978453 /* RxMoya.framework in Frameworks */,
+				D48546F01C7737370072BC78 /* ATRSlideSelectorView.framework in Frameworks */,
 				D41EC1F71C5F3E41008FE405 /* DZNEmptyDataSet.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -258,20 +261,20 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		B8DCA73C53399B3739CC4BE6 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				B8DCA039326AE690EC88562F /* MatchHeaderView.swift */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
 		B8DCA5F4A185DD88008C4BA1 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
 				B8DCAE20B66F954E860C9DCA /* Business */,
 			);
 			path = Classes;
+			sourceTree = "<group>";
+		};
+		B8DCA73C53399B3739CC4BE6 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B8DCA039326AE690EC88562F /* MatchHeaderView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		B8DCA74229D961AAB482A78A /* Factories */ = {
@@ -327,14 +330,6 @@
 			path = Network;
 			sourceTree = "<group>";
 		};
-		B8DCAE1A9944856364A950E0 /* Cells */ = {
-			isa = PBXGroup;
-			children = (
-				B8DCAC2AA1F7721040CC3CA3 /* MatchSectionResultViewCell.swift */,
-			);
-			path = Cells;
-			sourceTree = "<group>";
-		};
 		B8DCAD751C3ACEB3CA97AAE7 /* Parsers */ = {
 			isa = PBXGroup;
 			children = (
@@ -343,6 +338,14 @@
 				B8DCA6253306F39D9D75797F /* MatchGamerParserTests.swift */,
 			);
 			path = Parsers;
+			sourceTree = "<group>";
+		};
+		B8DCAE1A9944856364A950E0 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				B8DCAC2AA1F7721040CC3CA3 /* MatchSectionResultViewCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		B8DCAE20B66F954E860C9DCA /* Business */ = {
@@ -423,6 +426,7 @@
 		D41EC1F41C5F3DC6008FE405 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D48546EF1C7737370072BC78 /* ATRSlideSelectorView.framework */,
 				D48546551C75E1C00072BC78 /* Nimble.framework */,
 				D48546561C75E1C00072BC78 /* Quick.framework */,
 				D46C64471C74787B00978453 /* Result.framework */,
@@ -596,6 +600,7 @@
 				"$(SRCROOT)/Carthage/Build/iOS/Localize_Swift.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RxMoya.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Result.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/ATRSlideSelectorView.framework",
 			);
 			name = Carthage;
 			outputPaths = (
