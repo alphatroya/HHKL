@@ -3,9 +3,9 @@
 // Copyright (c) 2016 Heads and Hands. All rights reserved.
 //
 
-import NetworkActivityIndicatorManager
+import ATRNetworkActivityIndicatorManager
 import UIKit
-import RxMoya
+import Moya
 
 protocol ViewModelAccessoryFactoryProtocol {
     var requestManager: RxMoyaProvider<MatchesNetworkTarget> { get }

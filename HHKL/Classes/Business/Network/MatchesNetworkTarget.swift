@@ -4,7 +4,7 @@
 //
 
 import Foundation
-import RxMoya
+import Moya
 
 enum MatchesNetworkTarget {
     case Days(Int)
@@ -20,7 +20,7 @@ extension MatchesNetworkTarget: TargetType {
             return "league/\(league)/matches/"
         }
     }
-    var method: RxMoya.Method {
+    var method: Moya.Method {
         switch self {
         case .Days(_):
             return .GET

@@ -6,7 +6,7 @@
 import Foundation
 import RxSwift
 import SwiftyJSON
-import CocoaLumberjackSwift
+import CocoaLumberjack
 
 
 protocol ParserProtocol {
