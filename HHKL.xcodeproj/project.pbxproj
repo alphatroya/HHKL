@@ -432,7 +432,6 @@
 				D40F576B1C58DB1C00348DB9 /* Sources */,
 				D40F576C1C58DB1C00348DB9 /* Frameworks */,
 				D40F576D1C58DB1C00348DB9 /* Resources */,
-				D485465A1C75E9830072BC78 /* Carthage */,
 				591A8BA8F9E3C62EC7F52B45 /* Embed Pods Frameworks */,
 				F52CE417CCFF97986B34FE5F /* Copy Pods Resources */,
 			);
@@ -595,22 +594,6 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HHKL-HHKLTests/Pods-HHKL-HHKLTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
-		};
-		D485465A1C75E9830072BC78 /* Carthage */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/iOS/Quick.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/Nimble.framework",
-			);
-			name = Carthage;
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "/usr/local/bin/carthage copy-frameworks";
 		};
 		D4FE75A11C58E61D001B697C /* Calculate number of build and version  */ = {
 			isa = PBXShellScriptBuildPhase;

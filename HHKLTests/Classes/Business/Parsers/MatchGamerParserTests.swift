@@ -6,7 +6,7 @@
 import Quick
 import Nimble
 import RxSwift
-import RxMoya
+import Moya
 import SwiftyJSON
 @testable import HHKL
 
