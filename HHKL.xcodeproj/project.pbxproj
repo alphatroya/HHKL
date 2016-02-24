@@ -8,12 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		089BD52B579A06AB20BA3947 /* Pods_HHKL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 955C5C5DC6C32D33E109DCA9 /* Pods_HHKL.framework */; };
+		3A2ABC862BE3CC44D2FEBD41 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A3503F1C8E55A6E3EA97512 /* AssetsLibrary.framework */; };
 		4EE2AA1C67381F77809C1D9B /* Pods_HHKL_HHKLTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95E334993FEB08984F6DC8D6 /* Pods_HHKL_HHKLTests.framework */; };
 		58603101C2B002C8F3589BFD /* ParentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 586035D64EFCE7BAF735B440 /* ParentViewController.swift */; };
 		586034B59187F55DDC90E3FB /* MatchesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 586031E1C6BEB423AF4276E5 /* MatchesViewModel.swift */; };
 		586038B8F60B62C5E250A12E /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58603642D6BBC4C37AFBD41D /* Colors.swift */; };
 		58603FA3E558FCBDFCD182B5 /* MatchesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58603F265CC167CE8ED04342 /* MatchesViewController.swift */; };
+		59CD91067BB096DB6EC7A9AE /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5F9AC90806EED58F20FDD9F /* CoreText.framework */; };
 		84446B2C1C58F7CE00E6B171 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84446B2B1C58F7CE00E6B171 /* LaunchScreen.storyboard */; };
+		AD904E84DA2FAF6FEA2099C8 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62E112671C81DAF4918CE48A /* CoreTelephony.framework */; };
 		B8DCA00CE1A55EAEA43628F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B8DCA18DF9BB427F720D821E /* Assets.xcassets */; };
 		B8DCA088DC7E08140CC9871F /* Match.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DCAEC1B9C40A1012E331D0 /* Match.swift */; };
 		B8DCA0D4ACC3AD93F1849701 /* MatchGamerParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DCA6253306F39D9D75797F /* MatchGamerParserTests.swift */; };
@@ -38,9 +41,12 @@
 		B8DCAFA2C6A34A92CBCAC79F /* ViewControllerAccessoryFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DCADAFF0558D43EAF6CA73 /* ViewControllerAccessoryFactory.swift */; };
 		B8DCAFD61F258F3081B94DC8 /* ViewModelAccessoryFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DCA259AB5B058E840169D5 /* ViewModelAccessoryFactory.swift */; };
 		B8DCAFFF98951F7FE28820F4 /* NavigationControllerFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DCAF0531F177686A0245B7 /* NavigationControllerFlowController.swift */; };
+		BD6B2F7A0DB57625D4EDEE1D /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 167B4A474B7D47DE989C9EC6 /* SystemConfiguration.framework */; };
+		CF47A0F16D4A88A36A07DAE5 /* BuddyBuildSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79FE4EFD4A5EBAB72F769E40 /* BuddyBuildSDK.framework */; };
 		D40F577F1C58DB1C00348DB9 /* HHKLUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40F577E1C58DB1C00348DB9 /* HHKLUITests.swift */; };
 		D41EC1FB1C5F558F008FE405 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D41EC1FD1C5F558F008FE405 /* Localizable.strings */; };
 		D48546591C75E8A10072BC78 /* DayParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DCA15E4C49559EB0B230E4 /* DayParserTests.swift */; };
+		FDF62255C0065637DF0A352D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAD30C2FD9402A3BC0E9F78A /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,14 +67,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		02B06B193B52678D16598870 /* Bridging-Header.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
+		167B4A474B7D47DE989C9EC6 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		586031E1C6BEB423AF4276E5 /* MatchesViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchesViewModel.swift; sourceTree = "<group>"; };
 		586035D64EFCE7BAF735B440 /* ParentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParentViewController.swift; sourceTree = "<group>"; };
 		58603642D6BBC4C37AFBD41D /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		58603F265CC167CE8ED04342 /* MatchesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchesViewController.swift; sourceTree = "<group>"; };
 		5F6404C0743DF3089B4044DF /* Pods-HHKL.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HHKL.release.xcconfig"; path = "Pods/Target Support Files/Pods-HHKL/Pods-HHKL.release.xcconfig"; sourceTree = "<group>"; };
+		62E112671C81DAF4918CE48A /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		6F76BA4887AAFD59C82A2D90 /* Pods-HHKL-HHKLTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HHKL-HHKLTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-HHKL-HHKLTests/Pods-HHKL-HHKLTests.release.xcconfig"; sourceTree = "<group>"; };
+		79FE4EFD4A5EBAB72F769E40 /* BuddyBuildSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BuddyBuildSDK.framework; sourceTree = "<group>"; };
 		837C64D35EEE3F960C502295 /* Pods-HHKL.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HHKL.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HHKL/Pods-HHKL.debug.xcconfig"; sourceTree = "<group>"; };
 		84446B2B1C58F7CE00E6B171 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8A3503F1C8E55A6E3EA97512 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
 		955C5C5DC6C32D33E109DCA9 /* Pods_HHKL.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HHKL.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		95E334993FEB08984F6DC8D6 /* Pods_HHKL_HHKLTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HHKL_HHKLTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A15CAFAD4B3400572CDFC1DE /* Pods-HHKL-HHKLTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HHKL-HHKLTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HHKL-HHKLTests/Pods-HHKL-HHKLTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -105,6 +116,8 @@
 		D40F577E1C58DB1C00348DB9 /* HHKLUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HHKLUITests.swift; sourceTree = "<group>"; };
 		D40F57801C58DB1C00348DB9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D41EC1FF1C5F55E6008FE405 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		E5F9AC90806EED58F20FDD9F /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
+		FAD30C2FD9402A3BC0E9F78A /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +126,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				089BD52B579A06AB20BA3947 /* Pods_HHKL.framework in Frameworks */,
+				CF47A0F16D4A88A36A07DAE5 /* BuddyBuildSDK.framework in Frameworks */,
+				3A2ABC862BE3CC44D2FEBD41 /* AssetsLibrary.framework in Frameworks */,
+				59CD91067BB096DB6EC7A9AE /* CoreText.framework in Frameworks */,
+				AD904E84DA2FAF6FEA2099C8 /* CoreTelephony.framework in Frameworks */,
+				BD6B2F7A0DB57625D4EDEE1D /* SystemConfiguration.framework in Frameworks */,
+				FDF62255C0065637DF0A352D /* QuartzCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -176,6 +195,12 @@
 			children = (
 				955C5C5DC6C32D33E109DCA9 /* Pods_HHKL.framework */,
 				95E334993FEB08984F6DC8D6 /* Pods_HHKL_HHKLTests.framework */,
+				79FE4EFD4A5EBAB72F769E40 /* BuddyBuildSDK.framework */,
+				8A3503F1C8E55A6E3EA97512 /* AssetsLibrary.framework */,
+				E5F9AC90806EED58F20FDD9F /* CoreText.framework */,
+				62E112671C81DAF4918CE48A /* CoreTelephony.framework */,
+				167B4A474B7D47DE989C9EC6 /* SystemConfiguration.framework */,
+				FAD30C2FD9402A3BC0E9F78A /* QuartzCore.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -349,6 +374,7 @@
 				D40F575C1C58DB1C00348DB9 /* Products */,
 				F4F026DB5F74A9A13C53761B /* Pods */,
 				A6853D521E8F8A2E5114240D /* Frameworks */,
+				02B06B193B52678D16598870 /* Bridging-Header.h */,
 			);
 			sourceTree = "<group>";
 		};
@@ -807,12 +833,14 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/HHKL/Resources/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ru.handh.HHKL;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -825,12 +853,14 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/HHKL/Resources/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ru.handh.HHKL;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
