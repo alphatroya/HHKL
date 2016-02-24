@@ -4,6 +4,6 @@ xcode_project: HHKL.xcodeproj
 xcode_scheme: HHKL
 xcode_sdk: iphonesimulator9.2
 before_script:
-    - carthage bootstrap --platform iOS --no-use-binaries
+    - pod install
 script:
     - xctool -project HHKL.xcodeproj -scheme HHKL -sdk iphonesimulator9.2 -destination 'platform=iOS Simulator,name=iPhone 6s' ONLY_ACTIVE_ARCH=NO clean test 
