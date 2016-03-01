@@ -9,12 +9,11 @@ import ChameleonFramework
 extension UIColor {
 
     static func hhkl_mainColor() -> UIColor {
-        return UIColor.flatYellowColor()
+        return UIColor.flatBlackColorDark()
     }
 
     static func hhkl_secondaryColor() -> UIColor {
-        let colorArray = NSArray(ofColorsWithColorScheme: ColorScheme.Triadic, with: UIColor.hhkl_mainColor(), flatScheme: true)
-        return colorArray.firstObject! as! UIColor
+        return UIColor.flatWhiteColor()
     }
 
     static func hhkl_yellowFlatColor() -> UIColor {
