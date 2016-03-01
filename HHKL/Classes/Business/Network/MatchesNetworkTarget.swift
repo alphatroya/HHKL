@@ -12,7 +12,8 @@ enum MatchesNetworkTarget {
 
 extension MatchesNetworkTarget: TargetType {
     var baseURL: NSURL {
-        return NSURL(string: "http://hhkl.handh.ru:666/api/")!
+        //TODO: release host - "http://hhkl.handh.ru:666/api/"
+        return NSURL(string: "https://quiet-ravine-62266.herokuapp.com/")!
     }
     var path: String {
         switch self {
