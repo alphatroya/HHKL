@@ -16,6 +16,10 @@ extension UIColor {
         return UIColor.flatWhiteColor()
     }
 
+    static func hhkl_tertiaryColor() -> UIColor {
+        return UIColor.flatWhiteColorDark()
+    }
+
     static func hhkl_yellowFlatColor() -> UIColor {
         return UIColor.flatYellowColor()
     }

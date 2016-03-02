@@ -8,6 +8,7 @@ use_frameworks!
 
 target 'HHKL' do
   pod 'ATRLogFormatter', '~>1.2.1'
+  pod 'FontBlaster', '~>2.0.4'
   pod 'RxSwift', '~>2.0'
   pod 'ChameleonFramework', '~>2.1.0'
   pod 'SwiftyJSON', '~>2.3.1'

@@ -42,6 +42,7 @@ class MatchesViewController: ParentViewController {
         tableView.delegate = self
         tableView.registerClass(MatchCell.self, forCellReuseIdentifier: String(MatchCell))
         tableView.rowHeight = 90
+        tableView.sectionHeaderHeight = 36
         tableView.tableFooterView = UIView()
         tableView.emptyDataSetSource = self
         tableView.emptyDataSetDelegate = self
@@ -89,7 +90,9 @@ extension MatchesViewController: UITableViewDataSource, UITableViewDelegate {
         if let
         matchCell = cell as? MatchCell,
         match = viewModel.matchForCellAtIndexPath(indexPath) {
+            matchCell.yellowGamerImageView?.image = UIImage(named: "fake-avatar-gray-man")
             matchCell.yellowGamerLabel?.text = match.yellow.name
+            matchCell.redGamerImageView?.image = UIImage(named: "fake-avatar-color-man")
             matchCell.redGamerLabel?.text = match.red.name
             if let scoreArray = match.score where !scoreArray.isEmpty {
                 let result = scoreArray.getResultOfMatch()
@@ -101,8 +104,13 @@ extension MatchesViewController: UITableViewDataSource, UITableViewDelegate {
         return cell
     }
 
-    func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return "matches-view-controller-day-prefix".localized() + " " + viewModel.titleForHeaderInSection(section)
+    func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let label = UILabel(frame: CGRectMake(0, 0, tableView.frame.width, tableView.sectionHeaderHeight))
+        label.font = UIFont.hhkl_heavyItalic(18)
+        label.textAlignment = .Center
+        label.text = "matches-view-controller-day-prefix".localized() + " " + viewModel.titleForHeaderInSection(section)
+        label.backgroundColor = UIColor.hhkl_secondaryColor().colorWithAlphaComponent(0.975)
+        return label
     }
 
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {

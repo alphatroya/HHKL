@@ -11,8 +11,12 @@
 		3A2ABC862BE3CC44D2FEBD41 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A3503F1C8E55A6E3EA97512 /* AssetsLibrary.framework */; };
 		4EE2AA1C67381F77809C1D9B /* Pods_HHKL_HHKLTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95E334993FEB08984F6DC8D6 /* Pods_HHKL_HHKLTests.framework */; };
 		58603101C2B002C8F3589BFD /* ParentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 586035D64EFCE7BAF735B440 /* ParentViewController.swift */; };
+		586033A5BB1654C4E44FBD13 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58603FD16FC3F0C1FDE2AF97 /* Fonts.swift */; };
 		586034B59187F55DDC90E3FB /* MatchesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 586031E1C6BEB423AF4276E5 /* MatchesViewModel.swift */; };
+		5860375E52F79DE8569867A7 /* Lato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 58603C8C625A2AFA9363195A /* Lato-Regular.ttf */; };
+		586037F039902D2CD443546E /* Lato-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 58603EE800AFD932640226F4 /* Lato-Bold.ttf */; };
 		586038B8F60B62C5E250A12E /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58603642D6BBC4C37AFBD41D /* Colors.swift */; };
+		58603AFCD73E7C544A820C47 /* Lato-HeavyItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 586031AAA1354C5515728550 /* Lato-HeavyItalic.ttf */; };
 		58603FA3E558FCBDFCD182B5 /* MatchesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58603F265CC167CE8ED04342 /* MatchesViewController.swift */; };
 		59CD91067BB096DB6EC7A9AE /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5F9AC90806EED58F20FDD9F /* CoreText.framework */; };
 		84446B2C1C58F7CE00E6B171 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84446B2B1C58F7CE00E6B171 /* LaunchScreen.storyboard */; };
@@ -69,10 +73,14 @@
 /* Begin PBXFileReference section */
 		02B06B193B52678D16598870 /* Bridging-Header.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
 		167B4A474B7D47DE989C9EC6 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		586031AAA1354C5515728550 /* Lato-HeavyItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file.ttf; path = "Lato-HeavyItalic.ttf"; sourceTree = "<group>"; };
 		586031E1C6BEB423AF4276E5 /* MatchesViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchesViewModel.swift; sourceTree = "<group>"; };
 		586035D64EFCE7BAF735B440 /* ParentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParentViewController.swift; sourceTree = "<group>"; };
 		58603642D6BBC4C37AFBD41D /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		58603C8C625A2AFA9363195A /* Lato-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file.ttf; path = "Lato-Regular.ttf"; sourceTree = "<group>"; };
+		58603EE800AFD932640226F4 /* Lato-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file.ttf; path = "Lato-Bold.ttf"; sourceTree = "<group>"; };
 		58603F265CC167CE8ED04342 /* MatchesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchesViewController.swift; sourceTree = "<group>"; };
+		58603FD16FC3F0C1FDE2AF97 /* Fonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
 		5F6404C0743DF3089B4044DF /* Pods-HHKL.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HHKL.release.xcconfig"; path = "Pods/Target Support Files/Pods-HHKL/Pods-HHKL.release.xcconfig"; sourceTree = "<group>"; };
 		62E112671C81DAF4918CE48A /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		6F76BA4887AAFD59C82A2D90 /* Pods-HHKL-HHKLTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HHKL-HHKLTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-HHKL-HHKLTests/Pods-HHKL-HHKLTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -167,6 +175,7 @@
 			isa = PBXGroup;
 			children = (
 				58603642D6BBC4C37AFBD41D /* Colors.swift */,
+				58603FD16FC3F0C1FDE2AF97 /* Fonts.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -188,6 +197,16 @@
 				B8DCA8576F0382EEECA6DDF4 /* Match */,
 			);
 			path = Modules;
+			sourceTree = "<group>";
+		};
+		58603DD6DE842C21AB2E279B /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				58603EE800AFD932640226F4 /* Lato-Bold.ttf */,
+				586031AAA1354C5515728550 /* Lato-HeavyItalic.ttf */,
+				58603C8C625A2AFA9363195A /* Lato-Regular.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 		A6853D521E8F8A2E5114240D /* Frameworks */ = {
@@ -230,6 +249,7 @@
 				84446B2B1C58F7CE00E6B171 /* LaunchScreen.storyboard */,
 				D41EC1FD1C5F558F008FE405 /* Localizable.strings */,
 				B8DCA082A757442D28A024C6 /* JSONStubs */,
+				58603DD6DE842C21AB2E279B /* Fonts */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -541,6 +561,9 @@
 				D41EC1FB1C5F558F008FE405 /* Localizable.strings in Resources */,
 				B8DCA00CE1A55EAEA43628F9 /* Assets.xcassets in Resources */,
 				B8DCAD40AF44814D0709F296 /* days.json in Resources */,
+				586037F039902D2CD443546E /* Lato-Bold.ttf in Resources */,
+				58603AFCD73E7C544A820C47 /* Lato-HeavyItalic.ttf in Resources */,
+				5860375E52F79DE8569867A7 /* Lato-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -696,6 +719,7 @@
 				B8DCA222E737BF6BA635509C /* MatchesNetworkTarget.swift in Sources */,
 				B8DCA15B1F941D2939F3854A /* MatchHeaderView.swift in Sources */,
 				B8DCADD1C669573A5D1CA6CA /* MatchSectionResultViewCell.swift in Sources */,
+				586033A5BB1654C4E44FBD13 /* Fonts.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
