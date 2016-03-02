@@ -27,4 +27,8 @@ extension UIFont {
     static func hhkl_heavyItalic(size: CGFloat) -> UIFont {
         return UIFont(name: "Lato-HeavyItalic", size: size)!
     }
+
+    static func hhkl_black(size: CGFloat) -> UIFont {
+        return UIFont(name: "Lato-Black", size: size)!
+    }
 }
