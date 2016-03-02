@@ -35,6 +35,7 @@ extension MatchResultViewProtocol {
         stackView.addArrangedSubview(view)
 
         let gamerNameLabel = UILabel()
+        gamerNameLabel.font = UIFont.hhkl_regular(16)
         gamerNameLabel.textAlignment = .Center
         gamerNameLabel.adjustsFontSizeToFitWidth = true
         stackView.addArrangedSubview(gamerNameLabel)
@@ -45,7 +46,7 @@ extension MatchResultViewProtocol {
     func createScoreLabel() -> UILabel {
         let scoreLabel = UILabel()
         scoreLabel.textAlignment = .Center
-        scoreLabel.font = UIFont.systemFontOfSize(30)
+        scoreLabel.font = UIFont.hhkl_bold(32)
         return scoreLabel
     }
 }

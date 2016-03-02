@@ -30,6 +30,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window.makeKeyAndVisible()
         self.window = window
 
+        Fonts.configure()
+
         let appearance = UINavigationBar.appearance()
 
         appearance.setBackgroundImage(UIImage(), forBarMetrics: .Default)
@@ -38,7 +40,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         appearance.tintColor = UIColor.hhkl_mainColor()
         appearance.translucent = false
         appearance.titleTextAttributes = [
-            NSForegroundColorAttributeName : UIColor.hhkl_textColor()
+                NSFontAttributeName : UIFont.hhkl_bold(18),
+                NSForegroundColorAttributeName : UIColor.hhkl_textColor()
         ]
 
 

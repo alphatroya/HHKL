@@ -13,7 +13,7 @@
 "matches-view-controller-empty-table-title" = "Список матчей пуст";
 "matches-view-controller-empty-table-description" = "Тапните по таблице для повторного запроса";
 "matches-view-controller-day-prefix" = "День";
-"match-view-controller-vernus" = "VS";
+"match-view-controller-vernus" = "vs";
 
 "match-view-controller-title" = "Матч";
 "match-view-controller-first-section-title" = "Первый период";
