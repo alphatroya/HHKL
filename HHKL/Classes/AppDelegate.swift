@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import FontBlaster
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
