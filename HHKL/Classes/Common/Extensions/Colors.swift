@@ -21,11 +21,11 @@ extension UIColor {
     }
 
     static func hhkl_yellowFlatColor() -> UIColor {
-        return UIColor.flatYellowColor()
+        return UIColor(red: 252/255, green: 186/255, blue: 4/255, alpha: 1.0)
     }
 
     static func hhkl_redFlatColor() -> UIColor {
-        return UIColor.flatRedColor()
+        return UIColor(red: 186/255, green: 45/255, blue: 11/255, alpha: 1.0)
     }
 
     static func hhkl_textColor() -> UIColor {
